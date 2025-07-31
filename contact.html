@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Owl Carousel CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- Navbar with Custom Blue Background and Get Quote Button -->
+<nav class="navbar navbar-expand-lg bg-light sticky-top" >
+  <div class="container">
+    <!-- Logo -->
+    <a class="navbar-brand" href="index.html">
+      <img src="./myimages/logo/logo.jpeg" alt="Construction Logo" style="height: 50px;">
+    </a>
+
+    <!-- Toggle button for mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+      aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu Items -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <!-- Get Quote Button -->
+        <li class="nav-item ms-lg-3">
+          <a href="get-quote.html" class="btn text-white fw-bold" style="background-color: #2a3678;">Get Quote</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Contact Page Banner -->
+<section class="contact-banner" role="region" aria-label="Contact Banner">
+  <div class="container text-center">
+    <h1 class="display-4 fw-bold">Contact Us</h1>
+    <p class="lead">We’re here to help — let’s talk about your project.</p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<div class="contact-us">
+  <div class="container">
+    <div class="row cntc-bg2">
+      <div class="col-lg-7">
+        <h4 class="contact-form-title">Write Us Something</h4>
+        <form id="contact_form" action="https://formspree.io/f/myyleorq" method="POST">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-box">
+                <input type="text" name="name" placeholder="Name:" required>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-box">
+                <input type="email" name="email" placeholder="Email:" required>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-box">
+                <input type="tel" name="phone" placeholder="Mobile No:">
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-box">
+                <select id="service" name="service">
+                  <option value="">Select Service*</option>
+                  <option value="electrical">Electrical System</option>
+                  <option value="auto">Auto Car Repair</option>
+                  <option value="diagnostics">Engine Diagnostics</option>
+                  <option value="cleaning">Car & Engine Clean</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-lg-12">
+              <div class="form-box">
+                <textarea name="message" placeholder="Your Message"></textarea>
+              </div>
+            </div>
+            <div class="contact-form">
+              <button type="submit">Submit <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="col-lg-5">
+        <div class="single-contact-info-box">
+          <h3 class="cntc-info-title">Contact Info</h3>
+          <div class="contact-information2">
+            <div class="contacts-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="contacts-title">
+              <h5>Send E-Mail</h5>
+              <h6>youremail@gmail.com</h6>
+            </div>
+          </div>
+          <div class="contact-information2">
+            <div class="contacts-icon">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="contacts-title">
+              <h5>Call Anytime</h5>
+              <h6>+98 876 (9808) 020</h6>
+            </div>
+          </div>
+          <div class="contact-information2 upper2">
+            <div class="contacts-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="contacts-title">
+              <h5>Locations</h5>
+              <h6>102/B New Elephant Rd, Hatirjheel<br>Dhaka - 1212</h6>
+            </div>
+          </div>
+          <div class="follow-company-icon2 mt-3">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<iframe 
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.300076365942!2d77.594562!3d12.971598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c8d6a4d7%3A0x8fb9c2c601ed31d8!2sBangalore%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1691566660000!5m2!1sen!2sin" 
+  width="100%" 
+  height="450" 
+  style="border:0;" 
+  allowfullscreen="" 
+  loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4>About Us</h4>
+        <p>We’re dedicated to delivering great digital solutions and services. Based in Bangalore, India.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <p>Email: info@example.com</p>
+        <p>Phone: +91 98765 43210</p>
+        <p>Bangalore, Karnataka</p>
+      </div>
+      <div class="footer-column">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <p class="copyright">
+      &copy; 2025 Your Company Name. All rights reserved.
+    </p>
+  </div>
+</footer>
+
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+</body>
+</html>
