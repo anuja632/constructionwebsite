@@ -1,174 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Digital Experience Slider</title>
+  <meta charset="UTF-8">
+  <title>Construct Your Dream Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Owl Carousel CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Open Sans Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <!-- Animate.css -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
-<!-- Navbar with Custom Blue Background and Get Quote Button -->
-<nav class="navbar navbar-expand-lg sticky-top" >
-  <div class="container">
-    <!-- Logo -->
-    <a class="navbar-brand" href="index.html">
-      <img src="./myimages/logo/logo.jpeg" alt="Construction Logo" style="height: 50px;">
-    </a>
 
-    <!-- Toggle button for mobile -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-      aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top bg-white shadow-sm">
+  <div class="container d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center">
+      <a class="navbar-brand fw-bold d-flex align-items-center text-dark me-3" href="index.html">
+        <img src="images/logo.png" alt="Logo" height="40" class="me-2">
+      </a>
+
+      <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" id="locationDropdown" data-bs-toggle="dropdown">
+          Bangalore
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="locationDropdown">
+          <li><a class="dropdown-item" href="#">Chennai</a></li>
+          <li><a class="dropdown-item" href="#">Coimbatore</a></li>
+          <li><a class="dropdown-item" href="#">Madurai</a></li>
+          <li><a class="dropdown-item" href="#">Trichy</a></li>
+          <li><a class="dropdown-item" href="#">Salem</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Menu Items -->
-    <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        <!-- Get Quote Button -->
-        <li class="nav-item ms-lg-3">
-          <a href="get-quote.html" class="btn text-white fw-bold" style="background-color: #2a3678;">Get Quote</a>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Residential</a></li>
+            <li><a class="dropdown-item" href="#">Commercial</a></li>
+            <li><a class="dropdown-item" href="#">Industrial</a></li>
+          </ul>
         </li>
+        <li class="nav-item"><a class="nav-link" href="#">How it Works</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<header>
-  <div class="owl-carousel owl-theme">
-    
-    <!-- Slide 1: Quality Construction -->
-    <div class="item">
-      <img src="https://www.adanirealty.com/-/media/project/realty/blogs/under-construction-projects_-pros-and-cons-of-buying-an-under-construction-property.ashx" alt="Construction site">
-      <div class="cover">
-        <div class="container">
-     <div class="header-content">
-        <h2>Building Dreams with Precision</h2>
-        <h1>Quality Construction That Lasts</h1>
-        <h4>From blueprint to brick, we deliver excellence in every project we undertake.</h4>
-        <a href="get-quote.html"class="btn text-white fw-bold" style="background-color: #2a3678;">Get a Quote</a>
-      </div>
+
+
+<!-- Hero Section -->
+  <div class="hero-section">
+      <div class="container">
+        <!-- First Row: Text and Warranty -->
+        <div class="row align-items-center mb-4 text-center text-lg-start">
+          <div class="col-lg-6">
+            <h2 class="mb-0 text-dark">CONSTRUCT YOUR <span class="highlight">DREAM HOME</span></h2>
+          </div>
+          <div class="col-lg-4">
+            <p class="mb-0 fw-semibold text-secondary">India’s <span class="highlight">No.1</span> Tech-Enabled Construction Company</p>
+          </div>
+          <div class="col-lg-2 mt-3 mt-lg-0">
+            <div class="warranty-badge">10 YEAR <span>STRUCTURAL WARRANTY</span></div>
+          </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Slide 2: Trusted Builder -->
-    <div class="item">
-      <img src="https://glimageurl.golocall.com/golocal-post/image/287067_1479185595.jpeg" alt="Engineers planning">
-      <div class="cover">
-        <div class="container">
-          <div class="header-content">
-            <h2>Your Trusted Construction Partner</h2>
-            <h1>Residential & Commercial Projects</h1>
-            <h4>Delivering projects on time with unmatched quality and craftsmanship.</h4>
-                    <a href="get-quote.html"class="btn text-white fw-bold" style="background-color: #2a3678;">Get a Quote</a>
-
+      
+        <!-- Second Row: Image and Form -->
+        <div class="row align-items-center">
+          <!-- Left: Image -->
+          <div class="col-lg-6 mb-4 mb-lg-0">
+            <img src="image/gallery5.webp" alt="Modern Home" class="hero-image w-100">
+          </div>
+      
+          <!-- Right: Form -->
+          <div class="col-lg-6">
+            <div class="form-box">
+              <h4 class="mb-3 text-dark">Get in Touch</h4>
+              <form>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Full Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="John Doe">
+                </div>
+                <div class="mb-3">
+                  <label for="phone" class="form-label">Phone Number</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="9876543210">
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email Address</label>
+                  <input type="email" class="form-control" id="email" placeholder="john@example.com">
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Your Message</label>
+                  <textarea class="form-control" id="message" rows="3" placeholder="Tell us what you're looking for..."></textarea>
+                </div>
+                <button type="submit" class="btn text-white" style="background-color:#001489;">Submit Request</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Slide 3: Custom Design -->
-    <div class="item">
-      <img src="https://www.livemint.com/lm-img/img/2023/03/27/1600x900/construction_1679940764821_1679940765048_1679940765048.JPG" alt="Blueprint design">
-      <div class="cover">
-        <div class="container">
-          <div class="header-content">
-            <h2>We Design. We Build.</h2>
-            <h1>Custom Spaces Tailored to You</h1>
-            <h4>Combining smart architecture with functional spaces for your lifestyle or business needs.</h4>
-                    <a href="get-quote.html"class="btn text-white fw-bold" style="background-color: #2a3678;">Get a Quote</a>
-
+  </div>
+  <!-- about -->
+  <section class="about-section">
+    <div class="container">
+      <div class="text-center mb-4">
+        <h2 class="section-title">One-Stop Solution for <span>Your Dream Home Construction</span></h2>
+        <div class="decor-line"></div>
+      </div>
+      <div class="row align-items-center">
+        <!-- Image Column -->
+        <div class="col-md-6">
+          <div class="about-image">
+            <img src="image/galeery2.webp" alt="Modern Home Design">
           </div>
         </div>
-      </div>
-    </div>
 
-  </div>
-</header>
-<section class="about-section">
-  <div class="container">
-    <div class="about-content">
-      <div class="about-text">
-        <h2>About Us</h2>
+<div class="col-md-6">
+  <div class="about-content">
+    <h2>Creating <span style="color:#FEC902;">Elegant Spaces</span></h2>
+    <p>
+      We specialize in crafting interiors and exteriors that reflect both functionality and beauty. Whether it’s space planning, facade design, or detailing elements like lighting and textures — our team ensures every inch speaks of thoughtful design.
+    </p>
+    <p>
+      Each project is a collaboration of your vision and our creative expertise. From the initial sketches to the final finishing touches, we focus on delivering refined, timeless designs tailored to your lifestyle.
+    </p>
         <p>
-          We are a passionate team based in Bangalore, specializing in web development, branding, and digital solutions. 
-          Our mission is to help businesses grow online with high-quality, custom-designed services.
-        </p>
-        <p>
-          With years of experience and a customer-first approach, we ensure your ideas are transformed into powerful digital experiences.
-        </p>
-        <button class="bu">Get Started</button>
-
-      </div>
-      <div class="about-image">
-        <img src=https://rightcon.in/wp-content/uploads/2024/01/about-hero-img-2048x972.webp" alt="About Us">
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="container py-5">
-  <div class="text-center mb-4 section-title">
-    <h2><span class="grad-text">Why Choose Us?</span></h2>
-    <h4>Delivering Excellence in Every Brick and Beam</h4>
-  </div>
-
-  <div class="row text-center gy-4">
-    <div class="col-md-6 col-lg-3">
-      <div class="icon-box p-4 border rounded">
-        <div class="icon-circle mx-auto">
-          <i class="fas fa-drafting-compass fa-2x"></i>
-        </div>
-        <h5>Tailored Living Spaces</h5>
-        <p>Designed with purpose and built around your lifestyle, every project reflects your vision and values.</p>
-      </div>
-    </div>
-    <div class="col-md-6 col-lg-3">
-      <div class="icon-box p-4 border rounded">
-        <div class="icon-circle mx-auto">
-          <i class="fas fa-tools fa-2x"></i>
-        </div>
-        <h5>Superior Quality & Craft</h5>
-        <p>We use trusted materials and expert craftsmanship to ensure strength, style, and long-lasting.</p>
-      </div>
-    </div>
-    <div class="col-md-6 col-lg-3">
-      <div class="icon-box p-4 border rounded">
-        <div class="icon-circle mx-auto">
-          <i class="fas fa-clock fa-2x"></i>
-        </div>
-        <h5>On-Time Delivery</h5>
-        <p>Projects are planned and executed with care, keeping your timelines a top priority without cutting corners.</p>
-      </div>
-    </div>
-    <div class="col-md-6 col-lg-3">
-      <div class="icon-box p-4 border rounded">
-        <div class="icon-circle mx-auto">
-          <i class="fas fa-handshake fa-2x"></i>
-        </div>
-        <h5>Client-Focused Process</h5>
-        <p>From start to finish, we communicate clearly and build with integrity, keeping your goals.</p>
-      </div>
-    </div>
+      Through close collaboration, we turn ideas into inspiring environments — tailored perfectly to your taste, purpose, and future needs. The result: a signature space that tells your story with flair.
+    </p>
+    <a href="#" class="btn btn-yellow-outline mt-3">Explore Our Creations</a>
   </div>
 </div>
 
 
+      </div>
+    </div>
+  </section>
+<!-- services -->
+  <div class="container py-5">
+    <div class="row align-items-center">
+        <div class="col-lg-6">
+        <p class="offer-title">Our Offerings</p>
+        <h2 class="main-heading mb-3">Crafting Homes, Beyond Construction!</h2>
+        </div>
+                <div class="col-lg-6">
+                    <p class="offer-description">
+          Here each offering is tailored to manifest your dream home. From expertly constructed spaces to harmoniously designed interiors, we specialize in bringing your distinctive style to life.
+        </p>
+
+        </div>
+      <!-- Image Column -->
+      <div class="col-md-6 mb-4 mb-md-0">
+        <img src="image/gallery6.jpg" alt="Modern Home" class="img-fluid rounded shadow service-imh">
+      </div>
+
+      <!-- Content Column -->
+      <div class="col-md-6">
+        <!-- Offering 3 -->
+        <div class="d-flex align-items-start mb-4">
+          <div class="me-3 offer-number">1</div>
+          <div>
+            <h5 class="offer-heading mb-1">Residential Construction</h5>
+            <p class="offer-description">Creating comfortable, stylish, and functional living spaces tailored to your lifestyle and budget.</p>
+          </div>
+          <div class="ms-auto">
+            <svg class="arrow-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Offering 4 -->
+        <div class="d-flex align-items-start mb-4">
+          <div class="me-3 offer-number">2</div>
+          <div>
+            <h5 class="offer-heading mb-1">Commercial Construction</h5>
+            <p class="offer-description">From offices to retail spaces, we build environments that drive business success and growth.</p>
+          </div>
+          <div class="ms-auto">
+            <svg class="arrow-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Offering 5 -->
+        <div class="d-flex align-items-start">
+          <div class="me-3 offer-number">3</div>
+          <div>
+            <h5 class="offer-heading mb-1">Industrial Construction</h5>
+            <p class="offer-description">Robust, scalable, and efficient infrastructure for industrial operations and manufacturing needs.</p>
+          </div>
+          <div class="ms-auto">
+            <svg class="arrow-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+<!-- Why Choose Us -->
+ <div class="why"style="background:#f2f3f5;">
+     <div class="container py-5" >
+       <div class="text-center mb-4 section-title">
+         <h2><span class="grad-text">Why Choose Us?</span></h2>
+         <h4>Delivering Excellence in Every Brick and Beam</h4>
+       </div>
+     
+       <div class="row gy-4">
+         <!-- Card 1 -->
+         <div class="col-md-6 col-lg-3">
+           <div class="icon-box p-4 border rounded ">
+             <div class="icon-circle">
+               <i class="fas fa-drafting-compass"></i>
+             </div>
+             <div>
+               <h5 class="Lap">Tailored Living Spaces</h5>
+               <p>Designed with purpose and built around your lifestyle, every project reflects your vision and values.</p>
+             </div>
+           </div>
+         </div>
+     
+         <!-- Card 2 -->
+         <div class="col-md-6 col-lg-3">
+           <div class="icon-box p-4 border rounded ">
+             <div class="icon-circle">
+               <i class="fas fa-tools "></i>
+             </div>
+             <div>
+               <h5 class="Lap">Superior Quality & Craft</h5>
+               <p>We use trusted materials and expert craftsmanship to ensure strength quality.</p>
+             </div>
+           </div>
+         </div>
+     
+         <!-- Card 3 -->
+         <div class="col-md-6 col-lg-3">
+           <div class="icon-box p-4 border rounded ">
+             <div class="icon-circle">
+               <i class="fas fa-clock"></i>
+             </div>
+             <div>
+               <h5 class="Lap">On-Time Delivery</h5>
+               <p>Projects are planned and executed with care, keeping your timelines a top priority without cutting corners.</p>
+             </div>
+           </div>
+         </div>
+     
+         <!-- Card 4 -->
+         <div class="col-md-6 col-lg-3">
+           <div class="icon-box p-4 border rounded ">
+             <div class="icon-circle">
+               <i class="fas fa-handshake"></i>
+             </div>
+             <div>
+               <h5 class="Lap">Client-Focused Process</h5>
+               <p>From start to finish, we communicate clearly and build with integrity, goals.</p>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+
+ </div>
+
+<section class="logos ">
+  <div class="section-head text-center py-5">
+    <h2 class="section-title">
+      Our Trusted Partners
+    </h2>
+    <p class="section-subtitle">
+      Proud collaborations with industry-leading brands and suppliers
+    </p>
+  </div>
+
+  <div class="container pb-5">
+      <!-- Scrolling container -->
+      <div class="logo-slider">
+        <div class="logo-track">
+          <!-- Logos duplicated for seamless loop -->
+          <img src="https://www.buildahome.in/images/kamdhenu-logo.webp" alt="Logo 1">
+          <img src="https://www.buildahome.in/images/kajaria-logo.webp" alt="Logo 2">
+          <img src="https://www.buildahome.in/images/jsw-logo.webp" alt="Logo 3">
+          <img src="https://www.buildahome.in/images/drfixit-logo.webp" alt="Logo 4">
+          <img src="https://www.buildahome.in/images/asian-paints.webp" alt="Logo 5">
+          <img src="https://www.buildahome.in/images/acc-logo.webp" alt="Logo 6">
+    
+          <!-- Duplicate set -->
+          <img src="https://www.buildahome.in/images/kamdhenu-logo.webp" alt="Logo 1">
+          <img src="https://www.buildahome.in/images/kajaria-logo.webp" alt="Logo 2">
+          <img src="https://www.buildahome.in/images/jsw-logo.webp" alt="Logo 3">
+          <img src="https://www.buildahome.in/images/drfixit-logo.webp" alt="Logo 4">
+          <img src="https://www.buildahome.in/images/asian-paints.webp" alt="Logo 5">
+          <img src="https://www.buildahome.in/images/acc-logo.webp" alt="Logo 6">
+        </div>
+      </div>
+
+  </div>
+</section>
+
+<!-- counter -->
 <section class="counter-one">
   <div class="container">
     <div class="counter-one__inner">
@@ -217,12 +370,171 @@
     </div>
   </div>
 </section>
+<section class="project-gallery py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="text-uppercase text-warning fw-bold d-block mb-2">Gallery</span>
+      <h2 class="fw-bold">Our Latest Work</h2>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="d-flex justify-content-center flex-wrap gap-3 mb-4 filter-buttons">
+      <button class="btn btn-outline-primary active" data-filter="all">All</button>
+      <button class="btn btn-outline-primary" data-filter="residential">Residential Construction</button>
+      <button class="btn btn-outline-primary" data-filter="commercial">Commercial Construction</button>
+      <button class="btn btn-outline-primary" data-filter="industrial">Industrial Construction</button>
+      <!-- <button class="btn btn-outline-primary" data-filter="floor">Floor Plan</button> -->
+      <!-- <button class="btn btn-outline-primary" data-filter="house">House Construction</button>
+      <button class="btn btn-outline-primary" data-filter="interior">Interior</button>
+      <button class="btn btn-outline-primary" data-filter="renovation">Renovation</button> -->
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="row g-4 gallery-grid">
+      <div class="col-md-6 col-lg-4 gallery-item" data-category="residential">
+        <div class="card border-0 shadow-sm h-100">
+          <img src="https://rightcon.in/wp-content/uploads/2024/07/Artboard-1-100-8-min.jpg" class="card-img-top" alt="Residential Construction">
+          <div class="card-body">
+            <h5 class="card-title">Electronic City</h5>
+            <p class="text-muted mb-0">Residential </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 gallery-item" data-category="commercial">
+        <div class="card border-0 shadow-sm h-100">
+          <img src="https://www.solutionsgc.com/wp-content/uploads/commercial-tenant-improvement-work-at-san-francisco-2-832x624.jpg" class="card-img-top" alt="Commercial Construction">
+          <div class="card-body">
+            <h5 class="card-title">Indiranagar Complex</h5>
+            <p class="text-muted mb-0">Commercial </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 gallery-item" data-category="industrial">
+        <div class="card border-0 shadow-sm h-100">
+          <img src="https://static.vecteezy.com/system/resources/thumbnails/027/170/531/small/generative-ai-large-warehouse-exterior-industry-building-distribution-retail-center-part-of-storage-and-shipping-system-photo.jpg" class="card-img-top" alt="Industrial Construction">
+          <div class="card-body">
+            <h5 class="card-title">Peenya Industrial Shed</h5>
+            <p class="text-muted mb-0">Industrial</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 gallery-item" data-category="residential">
+        <div class="card border-0 shadow-sm h-100">
+          <img src="https://rightcon.in/wp-content/uploads/2024/01/Project-Vijay-Residency.webp" class="card-img-top" alt="Floor Plan">
+          <div class="card-body">
+            <h5 class="card-title">Varthur</h5>
+            <p class="text-muted mb-0">Residential</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-md-6 col-lg-4 gallery-item" data-category="commercial">
+        <div class="card border-0 shadow-sm h-100">
+          <img src="https://www.solutionsgc.com/wp-content/uploads/sanfrancisco-construction-work-of-general-contractor-constructive-solutions-832x624.jpg" class="card-img-top" alt="Interior">
+          <div class="card-body">
+            <h5 class="card-title">GPR Royale Layout</h5>
+            <p class="text-muted mb-0">Commercial</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 gallery-item" data-category="residential">
+        <div class="card border-0 shadow-sm h-100">
+          <img src="https://rightcon.in/wp-content/uploads/2024/12/WEBSITE-PROJECT-01-PRUN.jpg" class="card-img-top" alt="Interior">
+          <div class="card-body">
+            <h5 class="card-title">GPR Royale </h5>
+            <p class="text-muted mb-0">Residential</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
+  <section class="contact-section">
+    <!-- Left: Image -->
+    <div class="contact-img">
+      <img src="https://img.freepik.com/free-photo/customer-service-handsome-guy-with-headset-laptop-suit-typing-computer_140725-164761.jpg?uid=R189150807&ga=GA1.1.29269001.1752921385&semt=ais_hybrid&w=740&q=80" alt="Contact Expert" />
+      <!-- Replace with your image or use uploaded one -->
+    </div>
+
+    <!-- Right: Text and Buttons -->
+    <div class="contact-text">
+      <h2>Contact With Our Expert</h2>
+      <p>Book your appointment to talk to our experts who will assist you with all your doubts regarding our services.</p>
+      <div class="contact-buttons">
+        <a href="#" class="btn-contact"><i class="fas fa-phone"></i> Contact</a>
+      </div>
+    </div>
+  </section>
 
 
-        <section class="faq-one">
+<div class="container">
+
+    <div class="testimonial-slider">
+    <button class="prev-btn">‹</button>
+    <div class="testimonial-viewport">
+      <div class="testimonial-wrapper">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200&h=200" alt="Sarah K." class="testimonial-image">
+          <h3 class="testimonial-name">Sarah K.</h3>
+          <p class="testimonial-role">UX Designer @Brello</p>
+          <p class="testimonial-text">"I was looking for a way to streamline my design process and Anima's UI Kit was a lifesaver! Highly recommend!"</p>
+          <div class="rating">
+            <div class="star filled">★</div><div class="star filled">★</div><div class="star filled">★</div><div class="star filled">★</div><div class="star filled">★</div>
+          </div>
+        </div>
+  
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card">
+          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200&h=200" alt="Michael L." class="testimonial-image">
+          <h3 class="testimonial-name">Michael L.</h3>
+          <p class="testimonial-role">Creative Director @Yo</p>
+          <p class="testimonial-text">"The Landing Page UI Kit has been a game changer. Helped us deliver faster and more consistently."</p>
+          <div class="rating">
+            <div class="star filled">★</div><div class="star filled">★</div><div class="star filled">★</div><div class="star filled">★</div><div class="star empty">★</div>
+          </div>
+        </div>
+  
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200&h=200" alt="Lauren M." class="testimonial-image">
+          <h3 class="testimonial-name">Lauren M.</h3>
+          <p class="testimonial-role">UI Designer @Boo</p>
+          <p class="testimonial-text">"This UI Kit has everything I need to quickly finish projects. It's part of my go-to tools now."</p>
+          <div class="rating">
+            <div class="star filled">★</div><div class="star filled">★</div><div class="star filled">★</div><div class="star filled">★</div><div class="star filled">★</div>
+          </div>
+        </div>
+  
+        <!-- Testimonial 4 -->
+        <div class="testimonial-card">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200&h=200" alt="Daniel W." class="testimonial-image">
+          <h3 class="testimonial-name">Daniel W.</h3>
+          <p class="testimonial-role">Product Manager @Nimbus</p>
+          <p class="testimonial-text">"Go-to solution for MVPs. Clean code, beautiful UI, very customizable."</p>
+          <div class="rating">
+            <div class="star filled">★</div><div class="star filled">★</div><div class="star filled">★</div><div class="star filled">★</div><div class="star filled">★</div>
+          </div>
+        </div>
+  
+        <!-- Add more testimonial cards here -->
+      </div>
+    </div>
+    <button class="next-btn">›</button>
+  </div>
+</div>
+
+
+
+          <section class="faq-one">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-5 col-lg-5">
@@ -235,9 +547,6 @@
                             </div>
                             <div class="faq-one__img">
                                 <img src="https://unicktheme.com/bixola/assets/images/resources/faq-one-img-1.jpg" alt="">
-                                <div class="faq-one__shape-1 float-bob-y">
-                                    <img src="https://unicktheme.com/bixola/assets/images/shapes/faq-one-shape-1.png" alt="">
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -302,45 +611,70 @@
             </div>
         </section>
 
-<footer class="site-footer">
+
+<!-- Footer Section -->
+<footer class="footer-section text-white py-5">
   <div class="container">
-    <div class="footer-content">
-      <div class="footer-column">
-        <h4>About Us</h4>
-        <p>We’re dedicated to delivering great digital solutions and services. Based in Bangalore, India.</p>
-      </div>
-      <div class="footer-column">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="service.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-        <h4>Contact</h4>
-        <p>Email: info@example.com</p>
-        <p>Phone: +91 98765 43210</p>
-        <p>Bangalore, Karnataka</p>
-      </div>
-      <div class="footer-column">
-        <h4>Follow Us</h4>
-        <div class="social-icons">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    <!-- Add gx-4 here for equal column spacing -->
+<div class="row gx-5 gy-4 align-items-start text-center text-md-start">
+      
+      <!-- Column 1: Location -->
+      <div class="col-md-3">
+        <p><i class="fas fa-map-marker-alt me-2 text-warning"></i><strong>EXPERIENCE CENTRE</strong><br>Jayanagar, Bengaluru</p>
+        <p><i class="fas fa-phone-alt me-2 text-warning"></i>+91 98765 43210</p>
+        <p><i class="fas fa-envelope me-2 text-warning"></i>info@construction.com</p>
+        <div class="social-icons mt-3">
+          <a href="#" class="me-3 text-white"><i class="fab fa-linkedin"></i></a>
+          <a href="#" class="me-3 text-white"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="me-3 text-white"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
         </div>
       </div>
+
+      <!-- Column 2: Quick Links -->
+      <div class="col-md-3">
+        <h5 class="fw-bold mb-3">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="footer-link">Home</a></li>
+          <li><a href="#" class="footer-link">About</a></li>
+          <li><a href="#" class="footer-link">Services</a></li>
+          <li><a href="#" class="footer-link">Our Projects</a></li>
+          <li><a href="#" class="footer-link">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: About and Logo -->
+      <div class="col-md-3 text-md-center">
+        <img src="images/logo.png" alt=" Logo" class="mb-3" style="width: 130px;">
+        <p>
+          construction® is a one-stop solution for all your home construction needs, providing turnkey, end-to-end services tailored to your lifestyle and vision.
+        </p>
+      </div>
+
+      <!-- Column 4: Services -->
+      <div class="col-md-3" style="    text-align: right;">
+        <h5 class="fw-bold mb-3">Services</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="footer-link">Residential</a></li>
+          <li><a href="#" class="footer-link">Industrial</a></li>
+          <li><a href="#" class="footer-link">Commercial</a></li>
+          <li><a href="#" class="footer-link">How It Works</a></li>
+        </ul>
+      </div>
+
     </div>
-    <hr>
-    <p class="copyright">
-      &copy; 2025 Your Company Name. All rights reserved.
-    </p>
+
+    <!-- Divider -->
+    <hr class="border-light mt-4">
+
+    <!-- Copyright -->
+    <div class="text-center pt-2">
+      <p class="mb-0">&copy; 2025 construction®. All rights reserved.</p>
+    </div>
   </div>
 </footer>
+
+
 
   <!-- JS Scripts -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -348,29 +682,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
   <script src="js/script.js"></script>
-  <script>
-  $(document).ready(function(){
-    $(".completed-works").owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: true,
-      dots: false,
-      autoplay: true,
-      autoplayTimeout: 3000,
-      responsive: {
-        0: {
-          items: 1
-        },
-        600: {
-          items: 2
-        },
-        1000: {
-          items: 3
-        }
-      }
-    });
-  });
-</script>
+
 
 </body>
 </html>

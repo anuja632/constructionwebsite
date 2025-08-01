@@ -20,32 +20,47 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<!-- Navbar with Custom Blue Background and Get Quote Button -->
-<nav class="navbar navbar-expand-lg bg-light sticky-top" >
-  <div class="container">
-    <!-- Logo -->
-    <a class="navbar-brand" href="index.html">
-      <img src="./myimages/logo/logo.jpeg" alt="Construction Logo" style="height: 50px;">
-    </a>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top bg-white shadow-sm">
+  <div class="container d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center">
+      <a class="navbar-brand fw-bold d-flex align-items-center text-dark me-3" href="index.html">
+        <img src="images/logo.png" alt="Logo" height="40" class="me-2">
+      </a>
 
-    <!-- Toggle button for mobile -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-      aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" id="locationDropdown" data-bs-toggle="dropdown">
+          Bangalore
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="locationDropdown">
+          <li><a class="dropdown-item" href="#">Chennai</a></li>
+          <li><a class="dropdown-item" href="#">Coimbatore</a></li>
+          <li><a class="dropdown-item" href="#">Madurai</a></li>
+          <li><a class="dropdown-item" href="#">Trichy</a></li>
+          <li><a class="dropdown-item" href="#">Salem</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Menu Items -->
-    <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        <!-- Get Quote Button -->
-        <li class="nav-item ms-lg-3">
-          <a href="get-quote.html" class="btn text-white fw-bold" style="background-color: #2a3678;">Get Quote</a>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Services</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Residential</a></li>
+            <li><a class="dropdown-item" href="#">Commercial</a></li>
+            <li><a class="dropdown-item" href="#">Industrial</a></li>
+          </ul>
         </li>
+        <li class="nav-item"><a class="nav-link" href="#">How it Works</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
       </ul>
     </div>
   </div>
