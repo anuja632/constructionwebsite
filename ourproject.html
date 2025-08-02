@@ -58,112 +58,101 @@
     </div>
   </div>
 </nav>
-<!-- Contact Page Banner -->
-<section class="contact-banner" role="region" aria-label="Contact Banner">
-  <div class="container text-center">
-    <h1 class="display-4 fw-bold">Contact Us</h1>
-    <p class="lead">We’re here to help — let’s talk about your project.</p>
+<!-- Project Banner -->
+<div class="project-banner mb-5">
+  <div class="content">
+    <h1 class="display-5 fw-bold">Our Projects</h1>
+    <p class="lead">We have completed more than 200 highly prestigious projects in the field of construction.</p>
   </div>
-</section>
-
-<!-- Contact Section -->
-<div class="contact-us">
+</div>
+<!-- project -->
+<section class="project-gallery py-5">
   <div class="container">
-    <div class="row cntc-bg2">
-      <div class="col-lg-7">
-        <h4 class="contact-form-title">Write Us Something</h4>
-        <form id="contact_form" action="https://formspree.io/f/myyleorq" method="POST">
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="form-box">
-                <input type="text" name="name" placeholder="Name:" required>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="form-box">
-                <input type="email" name="email" placeholder="Email:" required>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="form-box">
-                <input type="tel" name="phone" placeholder="Mobile No:">
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="form-box">
-                <select id="service" name="service">
-                  <option value="">Select Service*</option>
-                  <option value="electrical">Electrical System</option>
-                  <option value="auto">Auto Car Repair</option>
-                  <option value="diagnostics">Engine Diagnostics</option>
-                  <option value="cleaning">Car & Engine Clean</option>
-                </select>
-              </div>
-            </div>
+    <div class="text-center mb-5">
+      <span class="text-uppercase text-warning fw-bold d-block mb-2">Our Project</span>
+      <h2 class="fw-bold">Our Latest Work</h2>
+    </div>
 
-            <div class="col-lg-12">
-              <div class="form-box">
-                <textarea name="message" placeholder="Your Message"></textarea>
-              </div>
-            </div>
-            <div class="contact-form">
-              <button type="submit">Submit <i class="fa-solid fa-arrow-right"></i></button>
-            </div>
+    <!-- Filter Buttons -->
+    <div class="d-flex justify-content-center flex-wrap gap-3 mb-4 filter-buttons">
+      <button class="btn btn-outline-primary active" data-filter="all">All</button>
+      <button class="btn btn-outline-primary" data-filter="residential">Residential Construction</button>
+      <button class="btn btn-outline-primary" data-filter="commercial">Commercial Construction</button>
+      <button class="btn btn-outline-primary" data-filter="industrial">Industrial Construction</button>
+      <!-- <button class="btn btn-outline-primary" data-filter="floor">Floor Plan</button> -->
+      <!-- <button class="btn btn-outline-primary" data-filter="house">House Construction</button>
+      <button class="btn btn-outline-primary" data-filter="interior">Interior</button>
+      <button class="btn btn-outline-primary" data-filter="renovation">Renovation</button> -->
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="row g-4 gallery-grid">
+      <div class="col-md-6 col-lg-4 gallery-item" data-category="residential">
+        <div class="card border-0 shadow-sm h-100">
+          <img src="https://rightcon.in/wp-content/uploads/2024/07/Artboard-1-100-8-min.jpg" class="card-img-top" alt="Residential Construction">
+          <div class="card-body">
+            <h5 class="card-title">Electronic City</h5>
+            <p class="text-muted mb-0">Residential </p>
           </div>
-        </form>
+        </div>
       </div>
 
-      <!-- Contact Info -->
-      <div class="col-lg-5">
-        <div class="single-contact-info-box">
-          <h3 class="cntc-info-title">Contact Info</h3>
-          <div class="contact-information2">
-            <div class="contacts-icon">
-              <i class="fa-solid fa-envelope"></i>
-            </div>
-            <div class="contacts-title">
-              <h5>Send E-Mail</h5>
-              <h6>youremail@gmail.com</h6>
-            </div>
+      <div class="col-md-6 col-lg-4 gallery-item" data-category="commercial">
+        <div class="card border-0 shadow-sm h-100">
+          <img src="https://www.solutionsgc.com/wp-content/uploads/commercial-tenant-improvement-work-at-san-francisco-2-832x624.jpg" class="card-img-top" alt="Commercial Construction">
+          <div class="card-body">
+            <h5 class="card-title">Indiranagar Complex</h5>
+            <p class="text-muted mb-0">Commercial </p>
           </div>
-          <div class="contact-information2">
-            <div class="contacts-icon">
-              <i class="fa-solid fa-phone"></i>
-            </div>
-            <div class="contacts-title">
-              <h5>Call Anytime</h5>
-              <h6>+98 876 (9808) 020</h6>
-            </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 gallery-item" data-category="industrial">
+        <div class="card border-0 shadow-sm h-100">
+          <img src="https://static.vecteezy.com/system/resources/thumbnails/027/170/531/small/generative-ai-large-warehouse-exterior-industry-building-distribution-retail-center-part-of-storage-and-shipping-system-photo.jpg" class="card-img-top" alt="Industrial Construction">
+          <div class="card-body">
+            <h5 class="card-title">Peenya Industrial Shed</h5>
+            <p class="text-muted mb-0">Industrial</p>
           </div>
-          <div class="contact-information2 upper2">
-            <div class="contacts-icon">
-              <i class="fa-solid fa-location-dot"></i>
-            </div>
-            <div class="contacts-title">
-              <h5>Locations</h5>
-              <h6>102/B New Elephant Rd, Hatirjheel<br>Dhaka - 1212</h6>
-            </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 gallery-item" data-category="residential">
+        <div class="card border-0 shadow-sm h-100">
+          <img src="https://rightcon.in/wp-content/uploads/2024/01/Project-Vijay-Residency.webp" class="card-img-top" alt="Floor Plan">
+          <div class="card-body">
+            <h5 class="card-title">Varthur</h5>
+            <p class="text-muted mb-0">Residential</p>
           </div>
-          <div class="follow-company-icon2 mt-3">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+
+
+      <div class="col-md-6 col-lg-4 gallery-item" data-category="commercial">
+        <div class="card border-0 shadow-sm h-100">
+          <img src="https://www.solutionsgc.com/wp-content/uploads/sanfrancisco-construction-work-of-general-contractor-constructive-solutions-832x624.jpg" class="card-img-top" alt="Interior">
+          <div class="card-body">
+            <h5 class="card-title">GPR Royale Layout</h5>
+            <p class="text-muted mb-0">Commercial</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 gallery-item" data-category="residential">
+        <div class="card border-0 shadow-sm h-100">
+          <img src="https://rightcon.in/wp-content/uploads/2024/12/WEBSITE-PROJECT-01-PRUN.jpg" class="card-img-top" alt="Interior">
+          <div class="card-body">
+            <h5 class="card-title">GPR Royale </h5>
+            <p class="text-muted mb-0">Residential</p>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-<iframe 
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.300076365942!2d77.594562!3d12.971598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c8d6a4d7%3A0x8fb9c2c601ed31d8!2sBangalore%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1691566660000!5m2!1sen!2sin" 
-  width="100%" 
-  height="450" 
-  style="border:0;" 
-  allowfullscreen="" 
-  loading="lazy" 
-  referrerpolicy="no-referrer-when-downgrade">
-</iframe>
+</section>
+
+
+
 
 
 <!-- Footer Section -->

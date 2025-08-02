@@ -50,28 +50,25 @@
       });
     });
   });
-document.addEventListener('DOMContentLoaded', () => {
-  const wrapper = document.querySelector('.testimonial-wrapper');
-  const cards = document.querySelectorAll('.testimonial-card');
-  let currentIndex = 0;
 
-  document.querySelector('.prev-btn').addEventListener('click', () => {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateSlider();
-    }
-  });
-
-  document.querySelector('.next-btn').addEventListener('click', () => {
-    if (currentIndex < cards.length - 3) {
-      currentIndex++;
-      updateSlider();
-    }
-  });
-
-  function updateSlider() {
-    wrapper.style.transform = `translateX(-${(100 / 3) * currentIndex}%)`;
-  }
-
-  updateSlider();
-});
+ $(document).ready(function(){
+      $('.testimonial-carousel').owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: true,
+        dots: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        responsive: {
+          0: {
+            items: 1
+          },
+          768: {
+            items: 2
+          },
+          1024: {
+            items: 3
+          }
+        }
+      });
+    });

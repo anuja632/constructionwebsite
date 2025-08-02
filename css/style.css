@@ -66,12 +66,12 @@
       color: #FEC902;
     }
 
-    .form-box {
+    /* .form-box {
       background: #ffffff;
       padding: 30px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    }
+    } */
 
     .hero-image {
       max-width: 100%;
@@ -797,11 +797,26 @@ color:#001489;
 }
 
 
-    .footer-section {
-      background: url('../image/footer.jpg') no-repeat center center/cover;
-      color: white;
-      /* padding: 60px 20px; */
-    }
+.footer-section {
+  position: relative;
+  background: url('../image/footer1.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 60px 20px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.footer-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+  z-index: -1;
+}
+
   .footer-link {
   color: #fff;
   text-decoration: none;
@@ -1059,94 +1074,256 @@ color:#001489;
   transform: translateY(0);
   background-color: #16214b;
 }
+    .testimonial-carousel .testimonial-card {
+      background: #fff;
+      border-radius: 1.5rem;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+      padding: 2rem;
+      text-align: center;
+      box-sizing: border-box;
+      margin: 1rem 0;
+    }
 
-.testimonial-slider {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* max-width: 1000px; */
-  margin: auto;
-  /* gap:20px; */
-  overflow: hidden;
-  padding: 2rem 0;
-}
+    .testimonial-image {
+      display: block;
+      margin: 0 auto 1rem auto;
+      width: 5rem !important;
+      height: 5rem;
+      border-radius: 50%;
+      object-fit: cover;
+    }
 
-.testimonial-viewport {
-  overflow: hidden;
-  width: 100%;
-}
+    .testimonial-name {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: rgb(31, 41, 55);
+    }
 
-.testimonial-wrapper {
-  display: flex;
-  transition: transform 0.5s ease;
-  gap: 16px; /* This creates space between the cards */
-  padding: 10px; /* Optional: Add side padding inside the viewport */
-}
+    .testimonial-role {
+      font-size: 0.875rem;
+      color: rgb(75, 85, 99);
+      margin-bottom: 1rem;
+    }
 
-.testimonial-card {
-  flex: 0 0 33.333%;
-  padding: 1rem;
-  box-sizing: border-box;
+    .testimonial-text {
+      color: rgb(55, 65, 81);
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .rating {
+      display: flex;
+      justify-content: center;
+      gap: 0.25rem;
+    }
+
+    .star {
+      font-size: 1.25rem;
+    }
+
+    .star.filled {
+      color: #facc15;
+    }
+
+    .star.empty {
+      color: #d1d5db;
+    }
+
+    /* Owl nav positioning */
+    .owl-carousel {
+      position: relative;
+    }
+
+    .owl-nav {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .owl-nav button {
+      background-color: white;
+      border: none;
+      width: 50px;
+      height: 50px;
+      font-size: 24px;
+      color: #374151;
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      pointer-events: all;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+    }
+
+    .owl-nav button:hover {
+      background-color: #f3f4f6;
+    }
+
+    .owl-nav button.owl-prev::before {
+      content: '‹';
+    }
+
+    .owl-nav button.owl-next::before {
+      content: '›';
+    }
+
+    .owl-nav button span {
+      display: none;
+    }
+
+    .section-subtitle {
   text-align: center;
-  background: #fff;
-  border-radius: 1.5rem;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-
+  font-size: 1rem;
+  color: #6b7280;
+  /* margin-top: -1rem; */
+  margin-bottom: 2.5rem;
 }
 
-.testimonial-image {
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
+  .project-banner {
+    background: url('https://images.unsplash.com/photo-1565182999561-18d7dc61c393?auto=format&fit=crop&w=1200&q=80') center center / cover no-repeat;
+    position: relative;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+  .project-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .project-banner .content {
+    position: relative;
+    z-index: 1;
+  }
+
+ .service-banner {
+    background: url('https://transform-cf1.nws.ai/https://cdn.thenewsroom.io/platform/story_media/1288814991/am_2218-20554cfb7a53d2b0eb4658bcee2c2861101adf81.jpg/fill/1200/630/') center center / cover no-repeat;
+    position: relative;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+  }
+  .service-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  .service-banner .content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .card-title{
+    color:#001489 !important;
+  }
+/* 13. Call To Action Section */
+.call-to-action-sec {
+	background-color: #001489;
+	background-image: url("../img/slider-3.jpg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	padding: 60px 0px;
+	background-attachment: fixed;
+}
+.call-to-action-overlay {
+	background-color: rgba(254, 201, 2, 0.9); /* #FEC902 with opacity */
+	height: 100%;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+}
+.call-to-action-text {
+	text-align: left;
+	position: relative;
+	z-index: 2;
+}
+.call-to-action-text h2 {
+	text-transform: capitalize !important;
+	font-size: 30px;
+	font-weight: bold;
+	color: #001489; /* Strong contrast against yellow overlay */
+}
+.call-to-action-text a.btn {
+	background: #001489;
+	border-radius: 4px;
+	color: #fff;
+	font-weight: bold;
+	padding: 14px 36px;
+	text-transform: uppercase;
+	margin-top: 30px;
+	position: relative;
+	z-index: 2;
+}
+.call-to-action-text a.btn i {
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+}
+.call-to-action-text a.btn:hover {
+	background: #FEC902;
+	color: #001489;
+	transition: all 0.4s ease-in-out 0s;
+}
+.call-to-action-text a.btn:hover i {
+	color: #001489;
+	transition: all 0.4s ease-in-out 0s;
+}
+
+
+.project-type-section h2 , h3 {
+  color: #001489;
+  margin-bottom: 15px;
+}
+
+.project-type-section p {
+  color: #333;
+  font-size: 17px;
+  text-align: justify;
+}
+
+.project-type-section ul li {
+  margin-bottom: 10px;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+/* Image height control */
+.project-type-section img {
+  height: 300px;
+  width: 100%;
   object-fit: cover;
-  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.testimonial-name {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: rgb(31, 41, 55);
-}
-
-.testimonial-role {
-  font-size: 0.875rem;
-  color: rgb(75, 85, 99);
-  margin-bottom: 1rem;
-}
-
-.testimonial-text {
-  color: rgb(55, 65, 81);
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
-}
-
-.rating {
-  display: flex;
-  justify-content: center;
-  gap: 0.25rem;
-}
-
-.star {
-  font-size: 1.25rem;
-}
-
-.star.filled {
-  color: #facc15; /* Yellow */
-}
-
-.star.empty {
-  color: #d1d5db; /* Gray */
-}
-
-.prev-btn,
-.next-btn {
-  background-color: white;
-  border: none;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  color: #374151;
-  border-radius: 9999px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
+  .nav-tabs .nav-link {
+    color: #001489 !important;
+    border: 1px solid #001489;
+  }
+  .nav-tabs .nav-link.active {
+    background-color: #001489 !important;
+    color: #fff !important;
+  }
+    .card-img-top {
+    height: 250px;
+    object-fit: cover;
+  }
