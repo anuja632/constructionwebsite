@@ -24,6 +24,10 @@
 
 </head>
 <body>
+<!-- Preloader -->
+<div id="preloader">
+  <div class="spinner"></div>
+</div>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg sticky-top bg-white shadow-sm">
@@ -37,13 +41,14 @@
         <button class="btn dropdown-toggle" type="button" id="locationDropdown" data-bs-toggle="dropdown">
           Bangalore
         </button>
-        <ul class="dropdown-menu" aria-labelledby="locationDropdown">
-          <li><a class="dropdown-item" href="#">Chennai</a></li>
-          <li><a class="dropdown-item" href="#">Coimbatore</a></li>
-          <li><a class="dropdown-item" href="#">Madurai</a></li>
-          <li><a class="dropdown-item" href="#">Trichy</a></li>
-          <li><a class="dropdown-item" href="#">Salem</a></li>
-        </ul>
+<ul class="dropdown-menu" aria-labelledby="locationDropdown">
+  <li><a class="dropdown-item location-option" href="#" data-location="Chennai">Chennai</a></li>
+  <li><a class="dropdown-item location-option" href="#" data-location="Coimbatore">Coimbatore</a></li>
+  <li><a class="dropdown-item location-option" href="#" data-location="Madurai">Madurai</a></li>
+  <li><a class="dropdown-item location-option" href="#" data-location="Trichy">Trichy</a></li>
+  <li><a class="dropdown-item location-option" href="#" data-location="Salem">Salem</a></li>
+</ul>
+
       </div>
     </div>
 
@@ -75,7 +80,7 @@
             <h2 class="mb-0 text-dark">CONSTRUCT YOUR <span class="highlight">DREAM HOME</span></h2>
           </div>
           <div class="col-lg-4">
-            <p class="mb-0 fw-semibold text-secondary">India’s <span class="highlight">No.1</span> Tech-Enabled Construction Company</p>
+            <p class="mb-0 fw-semibold">India’s <span class="highlight">No.1</span> Tech-Enabled Construction Company</p>
           </div>
           <div class="col-lg-2 mt-3 mt-lg-0">
             <div class="warranty-badge">10 YEAR <span>STRUCTURAL WARRANTY</span></div>
@@ -223,7 +228,7 @@
   </div>
 
 <!-- Why Choose Us -->
- <div class="why"style="background:#f2f3f5;">
+ <div class="why">
      <div class="container py-5" >
        <div class="text-center mb-4 section-title">
          <h2><span class="grad-text">Why Choose Us?</span></h2>
@@ -290,12 +295,13 @@
 <!-- logos -->
 <section class="logos ">
   <div class="section-head text-center py-5">
+        <p class="section-subtitle">
+      Proud collaborations with industry-leading brands and suppliers
+    </p>
     <h2 class="section-title">
       Our Trusted Partners
     </h2>
-    <p class="section-subtitle">
-      Proud collaborations with industry-leading brands and suppliers
-    </p>
+
   </div>
 
   <div class="container pb-5">
@@ -478,8 +484,8 @@
 
 <!-- testimonial -->
   <div class="container py-5">
+    <p class="section-subtitle">Real feedback from people using our product</p>
     <h2 class="section-title">What Our Customers Say</h2>
-<p class="section-subtitle">Real feedback from people using our product</p>
     <div class="owl-carousel testimonial-carousel">
       
       <!-- Testimonial 1 -->
@@ -538,7 +544,7 @@
                         <div class="faq-one__left">
                             <div class="section-title text-left">
                                 <div class="section-title__tagline-box">
-                                    <p class="section-title__tagline">FAQs</p>
+                                    <p class="section-subtitle__tagline">FAQs</p>
                                 </div>
                                 <h2 class="section-title__title">Frequently asked questions</h2>
                             </div>
@@ -617,9 +623,9 @@
       
       <!-- Column 1: Location -->
       <div class="col-md-3">
-        <p><i class="fas fa-map-marker-alt me-2 text-warning"></i><strong>EXPERIENCE CENTRE</strong><br>Jayanagar, Bengaluru</p>
-        <p><i class="fas fa-phone me-2 text-warning"></i>+91 98765 43210</p>
-        <p><i class="fas fa-envelope me-2 text-warning"></i>info@construction.com</p>
+        <p><i class="fas fa-map-marker-alt me-2 text-warning"></i>Bangalore, Dubai</p>
+        <p><i class="fas fa-phone me-2 text-warning"></i><a href="tel:+917094858696">+91 70948 58696</a></p>
+        <p><i class="fas fa-envelope me-2 text-warning"></i><a href="mailto:puzzle@diplomats.co.in">puzzle@diplomats.co.in</a></p>
         <div class="social-icons mt-3">
           <a href="#" class="me-3 text-white"><i class="fab fa-linkedin"></i></a>
           <a href="#" class="me-3 text-white"><i class="fab fa-instagram"></i></a>
@@ -632,11 +638,11 @@
       <div class="col-md-3">
         <h5 class="fw-bold mb-3">Quick Links</h5>
         <ul class="list-unstyled">
-          <li><a href="#" class="footer-link">Home</a></li>
-          <li><a href="#" class="footer-link">About</a></li>
-          <li><a href="#" class="footer-link">Services</a></li>
-          <li><a href="#" class="footer-link">Our Projects</a></li>
-          <li><a href="#" class="footer-link">Contact Us</a></li>
+          <li><a href="index.html" class="footer-link">Home</a></li>
+          <li><a href="about.html" class="footer-link">About</a></li>
+          <li><a href="service.html" class="footer-link">Services</a></li>
+          <li><a href="ourproject.html" class="footer-link">Our Projects</a></li>
+          <li><a href="contact.html" class="footer-link">Contact Us</a></li>
         </ul>
       </div>
 
@@ -652,10 +658,10 @@
       <div class="col-md-3" style="    text-align: right;">
         <h5 class="fw-bold mb-3">Services</h5>
         <ul class="list-unstyled">
-          <li><a href="#" class="footer-link">Residential</a></li>
-          <li><a href="#" class="footer-link">Industrial</a></li>
-          <li><a href="#" class="footer-link">Commercial</a></li>
-          <li><a href="#" class="footer-link">How It Works</a></li>
+          <li><a href="service.html" class="footer-link">Residential</a></li>
+          <li><a href="service.html" class="footer-link">Industrial</a></li>
+          <li><a href="service.html" class="footer-link">Commercial</a></li>
+          <li><a href="howitwork.html" class="footer-link">How It Works</a></li>
         </ul>
       </div>
 
@@ -687,3 +693,4 @@
 
 </body>
 </html>
+

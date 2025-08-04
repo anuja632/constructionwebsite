@@ -1,5 +1,31 @@
+  // Hide preloader after page load
+  window.addEventListener("load", function () {
+    const preloader = document.getElementById("preloader");
+    preloader.style.display = "none";
+  });
 
+  // Handle location click with preloader
+  document.querySelectorAll('.location-option').forEach(item => {
+    item.addEventListener('click', function (e) {
+      e.preventDefault();
 
+      const selectedLocation = this.getAttribute('data-location');
+      document.getElementById('locationDropdown').textContent = selectedLocation;
+
+      const currentPage = window.location.pathname.split("/").pop();
+
+      if (currentPage === "index.html" || currentPage === "") {
+        // Already on index, just update dropdown
+        return;
+      }
+
+      // Show preloader and redirect after 1 sec
+      document.getElementById("preloader").style.display = "flex";
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 1000);
+    });
+  });
   // Accrodion
   if ($(".accrodion-grp").length) {
     var accrodionGrp = $(".accrodion-grp");
@@ -72,3 +98,11 @@
         }
       });
     });
+
+      const phoneInput = document.querySelector("#phone");
+  window.intlTelInput(phoneInput, {
+    initialCountry: "in", // Set India as default
+    preferredCountries: ["in", "us", "gb", "ae", "au"],
+    separateDialCode: true,
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js" // for formatting
+  });
