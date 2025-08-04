@@ -662,7 +662,7 @@ color:#001489;
       font-size: 18px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       .contact-section {
         flex-direction: column;
         text-align: center;
@@ -678,6 +678,21 @@ color:#001489;
     }
 
 
+
+    @media (max-width: 550px) {
+#foo{
+  text-align: center !important;
+}
+.contact-text {
+    flex: 1 1 200px;
+    padding: 20px;
+}
+.how-it-works-section {
+    padding:20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+    }
 
     
 /*--------------------------------------------------------------
@@ -1571,6 +1586,59 @@ font-weight: 700;
         width: 100%;
       }
     }
+    @media (max-width: 550px) {
+  .step-container {
+    /* flex-direction: column; */
+    align-items: flex-start;
+  }
+
+  /* .step-left {
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 10px;
+  } */
+
+  .step-number-icon {
+    /* display: flex; */
+    align-items: center;
+    gap: 10px;
+  }
+.dotted-line {
+    width: 2px;
+    height: 400px;
+    background: repeating-linear-gradient(to bottom, #1a73e8, #1a73e8 4px, transparent 4px, transparent 8px);
+    margin-top: 10px;
+    flex-grow: 1;
+}
+
+  .step-title {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+
+  .step-main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .step-text {
+    min-width: 100%;
+  }
+
+  .highlight-title {
+    font-size: 16px;
+  }
+
+  .custom-list li {
+    font-size: 14px;
+  }
+
+  .step-text p {
+    font-size: 14px;
+  }
+}
+
 
     .heros-section {
       position: relative;
@@ -1992,6 +2060,9 @@ font-weight: 700;
   z-index: -1;
 }
 
+#foo{
+  text-align: right;
+}
 
     .content-block {
       max-width: 800px;
@@ -2113,3 +2184,37 @@ font-weight: 700;
         border-radius: 0 0 10px 10px;
       }
     }
+
+
+    @media only screen and (max-width: 1080px) {
+      .row.cntc-bg2 {
+    background: #f6f6f6;
+    padding: 0px;
+}
+#ka {
+    text-align: start;
+    font-size: 15px;
+    color: #FEC902;
+    font-weight: 700;
+    /* margin-top: -1rem; */
+    /* margin-bottom: 2.5rem; */
+    max-width: 500px;
+
+    }
+    .h5, h5
+ {
+    font-size: 1.5rem;
+}
+.contacts-title h6 {
+    margin-left: 24%;
+    font-size: 16px;
+    color: #444;
+    margin-top: 5px;
+}
+.single-contact-info-box {
+    background: #fff url(../images/resource/cntc-bg.png) no-repeat center / cover;
+    padding: 20px;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+  }
