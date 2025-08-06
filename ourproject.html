@@ -14,6 +14,7 @@
   <!-- Owl Carousel CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <!-- Animate.css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -26,43 +27,52 @@
 </div>
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg sticky-top bg-white shadow-sm">
-  <div class="container d-flex align-items-center justify-content-between">
-    <div class="d-flex align-items-center">
-      <a class="navbar-brand fw-bold d-flex align-items-center text-dark me-3" href="index.html">
-        <img src="images/logo.png" alt="Logo" height="40" class="me-2">
-      </a>
+  <div class="container">
+    <div class="row w-100 align-items-center flex-nowrap">
+      
+      <!-- Left: Logo + Location -->
+      <div class="col d-flex align-items-center">
+        <a class="navbar-brand fw-bold d-flex align-items-center text-dark me-3" href="index.html">
+          <img src="images/logo.png" alt="Logo" height="40" class="me-2">
+        </a>
 
-      <div class="dropdown">
-        <button class="btn dropdown-toggle" type="button" id="locationDropdown" data-bs-toggle="dropdown">
-          Bangalore
-        </button>
-<ul class="dropdown-menu" aria-labelledby="locationDropdown">
-  <li><a class="dropdown-item location-option" href="#" data-location="Chennai">Chennai</a></li>
-  <li><a class="dropdown-item location-option" href="#" data-location="Coimbatore">Coimbatore</a></li>
-  <li><a class="dropdown-item location-option" href="#" data-location="Madurai">Madurai</a></li>
-  <li><a class="dropdown-item location-option" href="#" data-location="Trichy">Trichy</a></li>
-  <li><a class="dropdown-item location-option" href="#" data-location="Salem">Salem</a></li>
-</ul>
-
+        <!-- Location Dropdown -->
+        <div class="dropdown">
+          <button class="btn dropdown-toggle" type="button" id="locationDropdown" data-bs-toggle="dropdown">
+            Location
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="locationDropdown">
+            <li><a class="dropdown-item location-option" href="#" data-location="Bangalore">Bangalore</a></li>
+            <li><a class="dropdown-item location-option" href="#" data-location="Chennai">Chennai</a></li>
+            <li><a class="dropdown-item location-option" href="#" data-location="Coimbatore">Coimbatore</a></li>
+            <li><a class="dropdown-item location-option" href="#" data-location="Madurai">Madurai</a></li>
+            <li><a class="dropdown-item location-option" href="#" data-location="Trichy">Trichy</a></li>
+            <li><a class="dropdown-item location-option" href="#" data-location="Salem">Salem</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <!-- Center: Menu -->
+      <div class="col-auto d-none d-lg-block">
+        <ul class="navbar-nav mx-auto flex-row gap-3">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="howitwork.html">How it Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="ourproject.html">Our Projects</a></li>
+        </ul>
+      </div>
 
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="howitwork.html">How it Works</a></li>
-        <li class="nav-item"><a class="nav-link" href="ourproject.html">Our Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-      </ul>
+<div class="col d-flex justify-content-end align-items-center gap-3" >
+  <a href="contact.html" class="btn btn-sm btn-primary px-3" style="background-color: #001489 !important; font-size: 18px;">
+    Get Build Quote
+  </a>
+</div>
+
     </div>
   </div>
 </nav>
+
 
 <!-- Project Banner -->
 <div class="project-banner mb-5">
@@ -93,7 +103,7 @@
 
     <!-- Gallery Grid -->
     <div class="row g-4 gallery-grid">
-      <div class="col-md-6 col-lg-4 gallery-item" data-category="residential">
+      <div class="col-md-6 col-lg-4 gallery-item" data-category="residential" data-aos="fade-up">
         <div class="card border-0 shadow-sm h-100">
           <img src="https://rightcon.in/wp-content/uploads/2024/07/Artboard-1-100-8-min.jpg" class="card-img-top" alt="Residential Construction">
           <div class="card-body">
@@ -103,7 +113,7 @@
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4 gallery-item" data-category="commercial">
+      <div class="col-md-6 col-lg-4 gallery-item" data-category="commercial" data-aos="fade-up">
         <div class="card border-0 shadow-sm h-100">
           <img src="https://www.solutionsgc.com/wp-content/uploads/commercial-tenant-improvement-work-at-san-francisco-2-832x624.jpg" class="card-img-top" alt="Commercial Construction">
           <div class="card-body">
@@ -113,7 +123,7 @@
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4 gallery-item" data-category="industrial">
+      <div class="col-md-6 col-lg-4 gallery-item" data-category="industrial" data-aos="fade-up" >
         <div class="card border-0 shadow-sm h-100">
           <img src="https://static.vecteezy.com/system/resources/thumbnails/027/170/531/small/generative-ai-large-warehouse-exterior-industry-building-distribution-retail-center-part-of-storage-and-shipping-system-photo.jpg" class="card-img-top" alt="Industrial Construction">
           <div class="card-body">
@@ -123,7 +133,7 @@
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4 gallery-item" data-category="residential">
+      <div class="col-md-6 col-lg-4 gallery-item" data-category="residential" data-aos="fade-up">
         <div class="card border-0 shadow-sm h-100">
           <img src="https://rightcon.in/wp-content/uploads/2024/01/Project-Vijay-Residency.webp" class="card-img-top" alt="Floor Plan">
           <div class="card-body">
@@ -134,7 +144,7 @@
       </div>
 
 
-      <div class="col-md-6 col-lg-4 gallery-item" data-category="commercial">
+      <div class="col-md-6 col-lg-4 gallery-item" data-category="commercial" data-aos="fade-up">
         <div class="card border-0 shadow-sm h-100">
           <img src="https://www.solutionsgc.com/wp-content/uploads/sanfrancisco-construction-work-of-general-contractor-constructive-solutions-832x624.jpg" class="card-img-top" alt="Interior">
           <div class="card-body">
@@ -144,7 +154,7 @@
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4 gallery-item" data-category="residential">
+      <div class="col-md-6 col-lg-4 gallery-item" data-category="residential" data-aos="fade-up">
         <div class="card border-0 shadow-sm h-100">
           <img src="https://rightcon.in/wp-content/uploads/2024/12/WEBSITE-PROJECT-01-PRUN.jpg" class="card-img-top" alt="Interior">
           <div class="card-body">
@@ -158,15 +168,13 @@
 </section>
 
 
-
 <!-- Footer Section -->
-<footer class="footer-section text-white py-5">
+<footer class="footer-section text-white py-5" data-aos="fade-up">
   <div class="container">
-    <!-- Add gx-4 here for equal column spacing -->
-<div class="row gx-5 gy-4 align-items-start text-center text-md-start">
+    <div class="row gx-5 gy-4 align-items-start text-center text-md-start">
       
       <!-- Column 1: Location -->
-      <div class="col-md-3">
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
         <p><i class="fas fa-map-marker-alt me-2 text-warning"></i>Bangalore, Dubai</p>
         <p><i class="fas fa-phone me-2 text-warning"></i><a href="tel:+917094858696">+91 70948 58696</a></p>
         <p><i class="fas fa-envelope me-2 text-warning"></i><a href="mailto:puzzle@diplomats.co.in">puzzle@diplomats.co.in</a></p>
@@ -179,7 +187,7 @@
       </div>
 
       <!-- Column 2: Quick Links -->
-      <div class="col-md-3">
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
         <h5 class="fw-bold mb-3">Quick Links</h5>
         <ul class="list-unstyled">
           <li><a href="index.html" class="footer-link">Home</a></li>
@@ -191,15 +199,15 @@
       </div>
 
       <!-- Column 3: About and Logo -->
-      <div class="col-md-3 text-md-center">
-        <img src="images/logo.png" alt=" Logo" class="mb-3" style="width: 130px;">
+      <div class="col-md-3 text-md-center" data-aos="fade-up" data-aos-delay="300">
+        <img src="images/logo.png" alt="Logo" class="mb-3" style="width: 130px;">
         <p>
           construction® is a one-stop solution for all your home construction needs, providing turnkey, end-to-end services tailored to your lifestyle and vision.
         </p>
       </div>
 
       <!-- Column 4: Services -->
-      <div class="col-md-3"  id="foo">
+      <div class="col-md-3" id="foo" data-aos="fade-up" data-aos-delay="400">
         <h5 class="fw-bold mb-3">Services</h5>
         <ul class="list-unstyled">
           <li><a href="service.html" class="footer-link">Residential</a></li>
@@ -212,10 +220,10 @@
     </div>
 
     <!-- Divider -->
-    <hr class="border-light mt-4">
+    <hr class="border-light mt-4" data-aos="zoom-in" data-aos-delay="450">
 
     <!-- Copyright -->
-    <div class="text-center pt-2">
+    <div class="text-center pt-2" data-aos="fade-in" data-aos-delay="500">
       <p class="mb-0">&copy; 2025 construction®. All rights reserved.</p>
     </div>
   </div>
@@ -233,6 +241,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
   <script src="js/script.js"></script>
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 
 </body>

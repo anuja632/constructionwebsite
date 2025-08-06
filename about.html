@@ -19,7 +19,8 @@
   <!-- Owl Carousel CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-
+<!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -31,40 +32,48 @@
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg sticky-top bg-white shadow-sm">
-  <div class="container d-flex align-items-center justify-content-between">
-    <div class="d-flex align-items-center">
-      <a class="navbar-brand fw-bold d-flex align-items-center text-dark me-3" href="index.html">
-        <img src="images/logo.png" alt="Logo" height="40" class="me-2">
-      </a>
+  <div class="container">
+    <div class="row w-100 align-items-center flex-nowrap">
+      
+      <!-- Left: Logo + Location -->
+      <div class="col d-flex align-items-center">
+        <a class="navbar-brand fw-bold d-flex align-items-center text-dark me-3" href="index.html">
+          <img src="images/logo.png" alt="Logo" height="40" class="me-2">
+        </a>
 
-      <div class="dropdown">
-        <button class="btn dropdown-toggle" type="button" id="locationDropdown" data-bs-toggle="dropdown">
-          Bangalore
-        </button>
-<ul class="dropdown-menu" aria-labelledby="locationDropdown">
-  <li><a class="dropdown-item location-option" href="#" data-location="Chennai">Chennai</a></li>
-  <li><a class="dropdown-item location-option" href="#" data-location="Coimbatore">Coimbatore</a></li>
-  <li><a class="dropdown-item location-option" href="#" data-location="Madurai">Madurai</a></li>
-  <li><a class="dropdown-item location-option" href="#" data-location="Trichy">Trichy</a></li>
-  <li><a class="dropdown-item location-option" href="#" data-location="Salem">Salem</a></li>
-</ul>
-
+        <!-- Location Dropdown -->
+        <div class="dropdown">
+          <button class="btn dropdown-toggle" type="button" id="locationDropdown" data-bs-toggle="dropdown">
+            Location
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="locationDropdown">
+            <li><a class="dropdown-item location-option" href="#" data-location="Bangalore">Bangalore</a></li>
+            <li><a class="dropdown-item location-option" href="#" data-location="Chennai">Chennai</a></li>
+            <li><a class="dropdown-item location-option" href="#" data-location="Coimbatore">Coimbatore</a></li>
+            <li><a class="dropdown-item location-option" href="#" data-location="Madurai">Madurai</a></li>
+            <li><a class="dropdown-item location-option" href="#" data-location="Trichy">Trichy</a></li>
+            <li><a class="dropdown-item location-option" href="#" data-location="Salem">Salem</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <!-- Center: Menu -->
+      <div class="col-auto d-none d-lg-block">
+        <ul class="navbar-nav mx-auto flex-row gap-3">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="howitwork.html">How it Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="ourproject.html">Our Projects</a></li>
+        </ul>
+      </div>
 
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="howitwork.html">How it Works</a></li>
-        <li class="nav-item"><a class="nav-link" href="ourproject.html">Our Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-      </ul>
+<div class="col d-flex justify-content-end align-items-center gap-3" >
+  <a href="contact.html" class="btn btn-sm btn-primary px-3" style="background-color: #001489 !important; font-size: 18px;">
+    Get Build Quote
+  </a>
+</div>
+
     </div>
   </div>
 </nav>
@@ -72,58 +81,55 @@
 
 
 
-  <section class="about-us-section position-relative">
-    <div class="about-bg-text">ABOUT US</div>
+<section class="about-us-section position-relative" data-aos="fade-up">
+  <div class="about-bg-text" data-aos="fade-right" data-aos-delay="200">ABOUT US</div>
 
-    <!-- Stats Left -->
-    <div class="stats-box left-stat">
-      100+<br><small>Homes Crafted</small>
-    </div>
+  <!-- Stats Left -->
+  <div class="stats-box left-stat" data-aos="fade-up-right" data-aos-delay="400">
+    100+<br><small>Homes Crafted</small>
+  </div>
 
-    <!-- Stats Right -->
-    <div class="stats-box right-stat">
-      150+<br><small>Clients Satisfied</small>
-    </div>
+  <!-- Stats Right -->
+  <div class="stats-box right-stat" data-aos="fade-up-left" data-aos-delay="400">
+    150+<br><small>Clients Satisfied</small>
+  </div>
 
-    <!-- House Image -->
-    <img src="image/modernhouse.jpg" alt="Modern House" class="house-img mx-auto d-block">
-  </section>
-<section class="about-sec pb-5 bg-light-subtle" id="about">
+  <!-- House Image -->
+  <img src="image/modernhouse.jpg" alt="Modern House" class="house-img mx-auto d-block" data-aos="zoom-in" data-aos-delay="600">
+</section>
+
+<section class="about-sec pb-5 bg-light-subtle" id="about" data-aos="fade-up">
   <div class="container">
-    
     <div class="row align-items-center">
+      
       <!-- Text Section -->
-      <div class="col-md-7">
+      <div class="col-md-7" data-aos="fade-right" data-aos-delay="200">
         <div class="about-text pe-md-5">
           <h6 class="text-uppercase fw-bold">About Us</h6>
-<h2 class="fw-bold mb-3">
-  Decades of Experience in Diverse Construction Projects.
-</h2>
+          <h2 class="fw-bold mb-3">Decades of Experience in Diverse Construction Projects.</h2>
           <p class="text-uppercase fw-bold small mb-3 create">Quality &nbsp; | &nbsp; Integrity &nbsp; | &nbsp; Reliability</p>
-          <p >
+          <p>
             With decades of experience in the construction industry, we specialize in delivering high-quality projects across commercial, industrial, and residential segments. Our team is equipped to handle large-scale developments, custom-built structures, and complex engineering requirements with precision and professionalism.
           </p>
 
           <h5 class="mt-4 fw-bold">Our Philosophy</h5>
-          <p >
+          <p>
             We are committed to ethical practices, long-term value creation, and exceeding client expectations. Every project is approached with a deep sense of responsibility and a focus on safety, sustainability, and functionality.
           </p>
 
           <ul class="list-unstyled mt-3">
-            <li><i class="bi bi-check-circle-fill me-2 ano"></i>Commercial Building Construction</li>
-            <li><i class="bi bi-check-circle-fill me-2 ano"></i>Industrial Infrastructure Development</li>
-            <li><i class="bi bi-check-circle-fill me-2 ano"></i>Residential Complexes & Villas</li>
-            <!-- <li><i class="bi bi-check-circle-fill me-2 ano"></i>Turnkey Project Execution</li>
-            <li><i class="bi bi-check-circle-fill me-2 ano"></i>Architectural & Structural Design</li> -->
+            <li data-aos="fade-up" data-aos-delay="300"><i class="bi bi-check-circle-fill me-2 ano"></i>Commercial Building Construction</li>
+            <li data-aos="fade-up" data-aos-delay="400"><i class="bi bi-check-circle-fill me-2 ano"></i>Industrial Infrastructure Development</li>
+            <li data-aos="fade-up" data-aos-delay="500"><i class="bi bi-check-circle-fill me-2 ano"></i>Residential Complexes & Villas</li>
           </ul>
         </div>
       </div>
 
       <!-- Image and Experience Box -->
-      <div class="col-md-5 text-center mt-4 mt-md-0">
+      <div class="col-md-5 text-center mt-4 mt-md-0" data-aos="fade-left" data-aos-delay="300">
         <div class="position-relative">
-          <img src="https://rightcon.in/wp-content/uploads/2024/07/Artboard-1-100-8-min-1-1.jpg" class="img-fluid rounded shadow fixed-height-img" alt="Construction Image">
-          <div class="experience-box bg-warning text-white d-flex align-items-center p-3 mt-3 rounded">
+          <img src="image/about.jpg" class="img-fluid rounded shadow fixed-height-img" alt="Construction Image" data-aos="zoom-in" data-aos-delay="400">
+          <div class="experience-box bg-warning text-white d-flex align-items-center p-3 mt-3 rounded" data-aos="fade-up" data-aos-delay="600">
             <i class="bi bi-building me-3 fs-1"></i>
             <div>
               <h4 class="mb-0 fw-bold">24 Years</h4>
@@ -132,111 +138,117 @@
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
-<section class="team-section">
-  <div class="team-content">
+<section class="team-section" data-aos="fade-up">
+  <div class="team-content" data-aos="fade-right" data-aos-delay="200">
     <h6>Driven by Expertise</h6>
     <h2>MEET OUR DEDICATED TEAM</h2>
     <p>
       Behind every successful project is a skilled team working with precision and passion. Our engineers, architects, and project managers collaborate seamlessly to deliver outstanding results across commercial, industrial, and residential developments.
     </p>
-    <a href="#" class="btn">WORK WITH US</a>
+    <a href="contact.html" class="btn" data-aos="zoom-in" data-aos-delay="400">WORK WITH US</a>
   </div>
-  <div class="team-image">
+  <div class="team-image" data-aos="fade-left" data-aos-delay="300">
     <img src="https://t4.ftcdn.net/jpg/06/35/52/21/360_F_635522132_w9sXALo7T1ruFNqPBGPfWmVXYFQipnDP.jpg" alt="Team at Work">
   </div>
 </section>
-<section class="mission-vision-section bg-light-subtle">
-  <div class="container">
-  <!-- Section Title -->
-  <div class="text-center mb-5">
-    <span class="text-uppercase text-warning fw-bold d-block mb-2">About Us</span>
-    <h2 class="section-title">Our Mission & Vision</h2>
-  </div>
-  <div class="row">
- <div class="col-md-1"></div>
-    <!-- MISSION -->
-    <div class="col-md-4 mb-4">
-      <div class="content-block">
-        <h2>MISSION</h2>
-        <p>
-          To deliver safe, sustainable, and innovative construction solutions that exceed client expectations,
-          while maintaining uncompromising quality, integrity, and professionalism in every project undertake.
-        </p>
-      </div>
-    </div>
-    <div class="col-md-1"></div>
-    <div class="col-md-1"></div>
-    <!-- VISION -->
-    <div class="col-md-4 mb-4">
-      <div class="content-block">
-        <h2>VISION</h2>
-        <p>
-          To be the most trusted and forward-thinking construction partner in the industry—leading the way in
-          commercial, industrial, and residential development through cutting-edge practices and client-focused delivery.
-        </p>
-      </div>
-    </div>
-        <div class="col-md-1"></div>
-  </div>
-  </div>
 
+<section class="mission-vision-section bg-light-subtle" data-aos="fade-up">
+  <div class="container">
+
+    <!-- Section Title -->
+    <div class="text-center mb-5" data-aos="fade-down">
+      <span class="text-uppercase text-warning fw-bold d-block mb-2">About Us</span>
+      <h2 class="section-title">Our Mission & Vision</h2>
+    </div>
+
+    <div class="row">
+      <div class="col-md-1"></div>
+
+      <!-- MISSION -->
+      <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-delay="200">
+        <div class="content-block">
+          <h2>MISSION</h2>
+          <p>
+            To deliver safe, sustainable, and innovative construction solutions that exceed client expectations,
+            while maintaining uncompromising quality, integrity, and professionalism in every project undertake.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-1"></div>
+      <div class="col-md-1"></div>
+
+      <!-- VISION -->
+      <div class="col-md-4 mb-4" data-aos="fade-left" data-aos-delay="300">
+        <div class="content-block">
+          <h2>VISION</h2>
+          <p>
+            To be the most trusted and forward-thinking construction partner in the industry—leading the way in
+            commercial, industrial, and residential development through cutting-edge practices and client-focused delivery.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-1"></div>
+    </div>
+  </div>
 </section>
-
-
-<section class="trusted-partner">
+<section class="trusted-partner" data-aos="fade-up">
   <div class="container">
-<div class="text-center mb-5">
-  <span class="text-uppercase text-warning fw-bold d-block mb-2">Our Core Values</span>
-  <h2 class="fw-bold">What Drives Our Construction Excellence</h2>
-</div>
 
+    <div class="text-center mb-5" data-aos="fade-down">
+      <h4><span class="text-uppercase text-warning fw-bold d-block mb-2">Our Core Values</span></h4>
+      <h2 class="fw-bold">What Drives Our Construction Excellence</h2>
+    </div>
 
     <div class="info-box">
       <div class="row">
-        <div class="col-md-3 col-12 feature-box">
+        <div class="col-md-3 col-12 feature-box" data-aos="zoom-in" data-aos-delay="100">
           <div class="feature-icon"><i class="bi bi-shield-check"></i></div>
           <h6>Uncompromised Safety</h6>
         </div>
-        <div class="col-md-3 col-12 feature-box">
+        <div class="col-md-3 col-12 feature-box" data-aos="zoom-in" data-aos-delay="200">
           <div class="feature-icon"><i class="bi bi-building"></i></div>
           <h6>Structural Integrity & Durability</h6>
         </div>
-        <div class="col-md-3 col-12 feature-box">
+        <div class="col-md-3 col-12 feature-box" data-aos="zoom-in" data-aos-delay="300">
           <div class="feature-icon"><i class="bi bi-clock-history"></i></div>
           <h6>On-Time Project Delivery</h6>
         </div>
-        <div class="col-md-3 col-12">
+        <div class="col-md-3 col-12" data-aos="zoom-in" data-aos-delay="400">
           <div class="feature-icon"><i class="bi bi-people-fill"></i></div>
           <h6>Collaborative Client Partnerships</h6>
         </div>
       </div>
     </div>
+
   </div>
 </section>
-<div class="cta-section">
-  <div class="cta-text col-md-6 pe-md-4">
+
+<div class="cta-section" data-aos="fade-up">
+  <div class="cta-text col-md-6 pe-md-4" data-aos="fade-right">
     <h4>Ready to Elevate Your Space?</h4>
     <p>Let’s connect and transform your ideas into stunning reality.</p>
-    <div class="cta-button">
+    <div class="cta-button" data-aos="zoom-in" data-aos-delay="300">
       <a href="contact.html" class="btn">Start Your Journey</a>
     </div>
   </div>
-  <div class="cta-image col-md-6 ps-md-4 mt-4 mt-md-0">
+  <div class="cta-image col-md-6 ps-md-4 mt-4 mt-md-0" data-aos="fade-left" data-aos-delay="200">
     <img src="image/home.png" alt="Modern House" />
   </div>
 </div>
 
 <!-- Footer Section -->
-<footer class="footer-section text-white py-5">
+<footer class="footer-section text-white py-5" data-aos="fade-up">
   <div class="container">
-    <!-- Add gx-4 here for equal column spacing -->
-<div class="row gx-5 gy-4 align-items-start text-center text-md-start">
+    <div class="row gx-5 gy-4 align-items-start text-center text-md-start">
       
       <!-- Column 1: Location -->
-      <div class="col-md-3">
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
         <p><i class="fas fa-map-marker-alt me-2 text-warning"></i>Bangalore, Dubai</p>
         <p><i class="fas fa-phone me-2 text-warning"></i><a href="tel:+917094858696">+91 70948 58696</a></p>
         <p><i class="fas fa-envelope me-2 text-warning"></i><a href="mailto:puzzle@diplomats.co.in">puzzle@diplomats.co.in</a></p>
@@ -249,7 +261,7 @@
       </div>
 
       <!-- Column 2: Quick Links -->
-      <div class="col-md-3">
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
         <h5 class="fw-bold mb-3">Quick Links</h5>
         <ul class="list-unstyled">
           <li><a href="index.html" class="footer-link">Home</a></li>
@@ -261,15 +273,15 @@
       </div>
 
       <!-- Column 3: About and Logo -->
-      <div class="col-md-3 text-md-center">
-        <img src="images/logo.png" alt=" Logo" class="mb-3" style="width: 130px;">
+      <div class="col-md-3 text-md-center" data-aos="fade-up" data-aos-delay="300">
+        <img src="images/logo.png" alt="Logo" class="mb-3" style="width: 130px;">
         <p>
           construction® is a one-stop solution for all your home construction needs, providing turnkey, end-to-end services tailored to your lifestyle and vision.
         </p>
       </div>
 
       <!-- Column 4: Services -->
-      <div class="col-md-3"  id="foo">
+      <div class="col-md-3" id="foo" data-aos="fade-up" data-aos-delay="400">
         <h5 class="fw-bold mb-3">Services</h5>
         <ul class="list-unstyled">
           <li><a href="service.html" class="footer-link">Residential</a></li>
@@ -282,14 +294,15 @@
     </div>
 
     <!-- Divider -->
-    <hr class="border-light mt-4">
+    <hr class="border-light mt-4" data-aos="zoom-in" data-aos-delay="450">
 
     <!-- Copyright -->
-    <div class="text-center pt-2">
+    <div class="text-center pt-2" data-aos="fade-in" data-aos-delay="500">
       <p class="mb-0">&copy; 2025 construction®. All rights reserved.</p>
     </div>
   </div>
 </footer>
+
 
 
   <!-- JS Scripts -->
@@ -302,6 +315,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
   <script src="js/script.js"></script>
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 
 </body>

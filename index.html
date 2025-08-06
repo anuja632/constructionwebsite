@@ -19,6 +19,8 @@
   <!-- Owl Carousel CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
   <link rel="stylesheet" href="css/style.css">
 
@@ -28,312 +30,265 @@
 <div id="preloader">
   <div class="spinner"></div>
 </div>
-
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg sticky-top bg-white shadow-sm">
-  <div class="container d-flex align-items-center justify-content-between">
-    <div class="d-flex align-items-center">
-      <a class="navbar-brand fw-bold d-flex align-items-center text-dark me-3" href="index.html">
-        <img src="images/logo.png" alt="Logo" height="40" class="me-2">
-      </a>
+  <div class="container">
+    <div class="row w-100 align-items-center flex-nowrap">
+      
+      <!-- Left: Logo + Location -->
+      <div class="col d-flex align-items-center">
+        <a class="navbar-brand fw-bold d-flex align-items-center text-dark me-3" href="index.html">
+          <img src="images/logo.png" alt="Logo" height="40" class="me-2">
+        </a>
 
-      <div class="dropdown">
-        <button class="btn dropdown-toggle" type="button" id="locationDropdown" data-bs-toggle="dropdown">
-          Bangalore
-        </button>
-<ul class="dropdown-menu" aria-labelledby="locationDropdown">
-  <li><a class="dropdown-item location-option" href="#" data-location="Chennai">Chennai</a></li>
-  <li><a class="dropdown-item location-option" href="#" data-location="Coimbatore">Coimbatore</a></li>
-  <li><a class="dropdown-item location-option" href="#" data-location="Madurai">Madurai</a></li>
-  <li><a class="dropdown-item location-option" href="#" data-location="Trichy">Trichy</a></li>
-  <li><a class="dropdown-item location-option" href="#" data-location="Salem">Salem</a></li>
-</ul>
-
+        <!-- Location Dropdown -->
+        <div class="dropdown">
+          <button class="btn dropdown-toggle" type="button" id="locationDropdown" data-bs-toggle="dropdown">
+            Location
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="locationDropdown">
+            <li><a class="dropdown-item location-option" href="#" data-location="Bangalore">Bangalore</a></li>
+            <li><a class="dropdown-item location-option" href="#" data-location="Chennai">Chennai</a></li>
+            <li><a class="dropdown-item location-option" href="#" data-location="Coimbatore">Coimbatore</a></li>
+            <li><a class="dropdown-item location-option" href="#" data-location="Madurai">Madurai</a></li>
+            <li><a class="dropdown-item location-option" href="#" data-location="Trichy">Trichy</a></li>
+            <li><a class="dropdown-item location-option" href="#" data-location="Salem">Salem</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <!-- Center: Menu -->
+      <div class="col-auto d-none d-lg-block">
+        <ul class="navbar-nav mx-auto flex-row gap-3">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="howitwork.html">How it Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="ourproject.html">Our Projects</a></li>
+        </ul>
+      </div>
 
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="howitwork.html">How it Works</a></li>
-        <li class="nav-item"><a class="nav-link" href="ourproject.html">Our Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-      </ul>
+<div class="col d-flex justify-content-end align-items-center gap-3" >
+  <a href="contact.html" class="btn btn-sm btn-primary px-3" style="background-color: #001489 !important; font-size: 18px;">
+    Get Build Quote
+  </a>
+</div>
+
     </div>
   </div>
 </nav>
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dream Home</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/a2e0b8a6f0.js" crossorigin="anonymous"></script>
-  <style>
 
+<section class="main-slider">
+  <div class="main-slider-carousel owl-carousel owl-theme">
 
-    .hero-section {
-      background-image: url("https://img.freepik.com/premium-photo/white-boards-table-top-wooden-texture-abstract-background_84485-3507.jpg?w=1480");
-      border-radius: 12px;
-      padding: 40px 30px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-text h1 {
-      font-size: 2.8rem;
-      font-weight: 800;
-    }
-
-    .hero-text h1 span {
-      color: #001489;
-    }
-
-    .badge-box {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      font-size: 18px;
-      margin-top: 10px;
-    }
-
-    .badge-box .highlight {
-      color: #001489;
-      font-weight: bold;
-      font-size: 30px;
-    }
-
-    .badge-box .subtext {
-      color: #333;
-    }
-
-    .structural-badge {
-      background-color: #001489;
-      color: #FEC902;
-      padding: 8px 16px;
-      font-size: 12px;
-      border-radius: 4px;
-      font-weight: 600;
-    }
-
-    .hero-image img {
-      width: 100%;
-      border-radius: 10px;
-      height: auto;
-      max-height: 400px;
-      object-fit: cover;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-    }
-
-    .form-section {
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .btn-orange {
-      background-color: #001489;
-      color: white;
-      font-weight: bold;
-      border: none;
-      padding: 10px;
-      transition: background-color 0.3s;
-    }
-
-    .highlight-box {
-      background-color: #001489;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 8px;
-      font-weight: bold;
-      min-width: 120px;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    }
-
-    .highlight-number {
-      font-size: 1.4rem;
-      font-weight: 700;
-    }
-
-    .highlight-label {
-      font-size: 0.9rem;
-    }
-.big-number {
-  font-size: 1.8rem; /* Adjust as needed */
-  font-weight: 800;
-  margin-right: 4px;
-}
-
-    /* Responsive Tweaks */
-    @media (max-width: 991.98px) {
-      .hero-text h1 {
-        font-size: 2.2rem;
-      }
-
-      .hero-image img {
-        height: 300px;
-      }
-
-      .highlight-box {
-        min-width: 100px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      .hero-text h1 {
-        font-size: 1.8rem;
-      }
-
-      .form-section {
-        margin-top: 30px;
-      }
-
-      .highlight-box {
-        flex: 1 1 45%;
-      }
-
-      .structural-badge {
-        font-size: 11px;
-      }
-    }
-
-    @media (max-width: 576px) {
-      .hero-section {
-        padding: 20px 15px;
-      }
-
-      .hero-text h1 {
-        font-size: 1.5rem;
-      }
-
-      .highlight-box {
-        padding: 10px 12px;
-        font-size: 0.85rem;
-      }
-
-      .highlight-number {
-        font-size: 1.2rem;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <div class="hero-section">
-    <div class="container">
-      <div class="row align-items-start flex-column flex-md-row">
-        
-        <!-- Left Content -->
-        <div class="col-md-9 hero-text">
-          <h1>CONSTRUCT YOUR <span>DREAM HOME</span></h1>
-
-          <div class="row align-items-center mt-4 g-4">
-            <!-- Image -->
-            <div class="col-lg-7">
-              <img 
-                src="image/3d-model.jpg" 
-                alt="Dream Home" 
-                class="rounded shadow w-100" 
-              />
+    <!-- Slide 1 -->
+    <div class="slide" style="background-image: url('https://www.solutionsgc.com/wp-content/uploads/modern-methods-of-construction-MMC-scaled.jpg')">
+      <div class="dark-overlay"></div>
+      <div class="auto-container container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <div class="content-boxed">
+<div class="title">Smart Solutions for Modern Living</div>
+              <span class="main_titles">We Build Homes, Not Just Walls</span>
+              <div class="btns-box mt-5">
+                <a href="#" class="theme-btn btn-style-two">Read More <i class="fas fa-arrow-right"></i></a>
+                <a href="#" class="theme-btn btn-style-three">Contact Now <i class="fas fa-arrow-right"></i></a>
+              </div>
             </div>
-
-            <!-- Info & Stats -->
-            <div class="col-lg-5 d-flex flex-column gap-4">
-              <div class="badge-box text-start">
-                <div class="highlight">India’s No.1</div>
-                <div class="subtext">Tech-Enabled Construction Company</div>
+          </div>
+          <div class="col-lg-4">
+            <div class="form-default">
+              <div class="title-box"><span>Get Your Project Quote</span></div>
+              <div class="client-form">
+                <form>
+                  <input type="text" placeholder="Full Name"/>
+                  <input type="text" placeholder="Phone Number" maxlength="10"/>
+                  <input type="email" placeholder="Email ID"/>
+                  <select>
+                    <option disabled selected>Project Size</option>
+                    <option>1000 - 2000 sq.ft</option>
+                    <option>2000 - 4000 sq.ft</option>
+                    <option>4000+ sq.ft</option>
+                  </select>
+                  <select>
+                    <option disabled selected>Type of Work</option>
+                    <option>Residential</option>
+                    <option>Commercial</option>
+                    <option>Industrial</option>
+   
+                  </select>
+                  <button type="submit" class="btn-style-twelve">Submit Request</button>
+                </form>
               </div>
-
-              <div class="d-flex flex-wrap gap-3 justify-content-start">
-                <div class="highlight-box">
-                  <div class="highlight-number">9,000+</div>
-                  <div class="highlight-label">Homes</div>
-                </div>
-                <div class="highlight-box">
-                  <div class="highlight-number">11,000+</div>
-                  <div class="highlight-label">Floor Plans</div>
-                </div>
-              </div>
-<div class="structural-badge text-center align-self-start mt-3">
-  <span class="big-number">10</span> YEAR STRUCTURAL WARRANTY
-</div>
-
             </div>
           </div>
         </div>
-
-        <!-- Right Form -->
-        <div class="col-md-3 mt-5 pt-md-5">
-          <div class="form-section w-100">
-            <h5 class="fw-bold mb-3">
-              <i class="fas fa-phone-volume me-2 text-primary"></i>
-              Talk to Our Expert
-            </h5>
-            
-            <form onsubmit="event.preventDefault(); alert('Your request has been submitted!')">
-              <div class="mb-3">
-                <label for="name" class="form-label">Name*</label>
-                <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required />
-              </div>
-
-              <div class="mb-3">
-                <label for="phone" class="form-label">Phone Number*</label>
-                <div class="input-group">
-                  <span class="input-group-text">+91</span>
-                  <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter phone number" required />
-                </div>
-              </div>
-
-              <div class="mb-3">
-                <label for="location" class="form-label">Plot Location*</label>
-                <input type="text" id="location" name="location" class="form-control" placeholder="Where is your plot located?" required />
-              </div>
-
-              <button type="submit" class="btn btn-orange w-100">
-                Book Free Consultation
-              </button>
-            </form>
-          </div>
-        </div>
-
       </div>
     </div>
-  </div>
 
-</body>
-</html>
+    <!-- Slide 2 -->
+    <div class="slide" style="background-image: url('https://www.whiteconst.com/site/assets/files/2180/home_2.jpg')">
+      <div class="dark-overlay"></div>
+      <div class="auto-container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <div class="content-boxed">
+              <div class="title">Trusted Partner for Your Dream Space</div>
+              <span class="main_titles">Turn Your Plot into a Dream Home</span>
+              <div class="btns-box mt-5">
+                <a href="#" class="theme-btn btn-style-two">Read More <i class="fas fa-arrow-right"></i></a>
+                <a href="#" class="theme-btn btn-style-three">Contact Now <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="form-default">
+              <div class="title-box"><span>Get Your Project Quote</span></div>
+              <div class="client-form">
+                <form>
+                  <input type="text" placeholder="Full Name"/>
+                  <input type="text" placeholder="Phone Number" maxlength="10"/>
+                  <input type="email" placeholder="Email ID"/>
+                  <select>
+                    <option disabled selected>Project Size</option>
+                    <option>1000 - 2000 sq.ft</option>
+                    <option>2000 - 4000 sq.ft</option>
+                    <option>4000+ sq.ft</option>
+                  </select>
+                  <select>
+                    <option disabled selected>Type of Work</option>
+                    <option>Residential</option>
+                    <option>Commercial</option>
+                    <option>Industrial</option>
+   
+                  </select>
+                  <button type="submit" class="btn-style-twelve">Submit Request</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide" style="background-image: url('https://www.whiteconst.com/site/assets/files/2181/home_3.jpg')">
+      <div class="dark-overlay"></div>
+      <div class="auto-container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <div class="content-boxed">
+              <div class="title">Expert Guidance from Start to Finish</div>
+              <span class="main_titles">Bringing Your Ideas to Life</span>
+              <div class="btns-box mt-5">
+                <a href="#" class="theme-btn btn-style-two">Read More <i class="fas fa-arrow-right"></i></a>
+                <a href="#" class="theme-btn btn-style-three">Contact Now <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="form-default">
+              <div class="title-box"><span>Get Your Project Quote</span></div>
+              <div class="client-form">
+                <form>
+                  <input type="text" placeholder="Full Name"/>
+                  <input type="text" placeholder="Phone Number" maxlength="10"/>
+                  <input type="email" placeholder="Email ID"/>
+                  <select>
+                    <option disabled selected>Project Size</option>
+                    <option>1000 - 2000 sq.ft</option>
+                    <option>2000 - 4000 sq.ft</option>
+                    <option>4000+ sq.ft</option>
+                  </select>
+                  <select>
+                    <option disabled selected>Type of Work</option>
+                    <option>Residential</option>
+                    <option>Commercial</option>
+                    <option>Industrial</option>
+   
+                  </select>
+                  <button type="submit" class="btn-style-twelve">Submit Request</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide" style="background-image: url('https://www.whiteconst.com/site/assets/files/2183/home_5.1080x0.jpg')">
+      <div class="dark-overlay"></div>
+      <div class="auto-container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <div class="content-boxed">
+              <div class="title">Your Vision, Our Expertise</div>
+              <span class="main_titles">Let’s Build Something Beautiful Together</span>
+              <div class="btns-box mt-5">
+                <a href="#" class="theme-btn btn-style-two">Read More <i class="fas fa-arrow-right"></i></a>
+                <a href="#" class="theme-btn btn-style-three">Contact Now <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="form-default">
+              <div class="title-box"><span>Get Your Project Quote</span></div>
+              <div class="client-form">
+                <form>
+                  <input type="text" placeholder="Full Name"/>
+                  <input type="text" placeholder="Phone Number" maxlength="10"/>
+                  <input type="email" placeholder="Email ID"/>
+                  <select>
+                    <option disabled selected>Project Size</option>
+                    <option>1000 - 2000 sq.ft</option>
+                    <option>2000 - 4000 sq.ft</option>
+                    <option>4000+ sq.ft</option>
+                  </select>
+                  <select>
+                    <option disabled selected>Type of Work</option>
+                    <option>Residential</option>
+                    <option>Commercial</option>
+                    <option>Industrial</option>
+   
+                  </select>
+                  <button type="submit" class="btn-style-twelve">Submit Request</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
 
 
 
 
   <!-- about -->
-  <section class="about-section">
+  <section class="about-section" data-aos="fade-up">
     <div class="container">
-      <div class="text-center mb-4">
+      <div class="text-center mb-4"  data-aos="zoom-in">
         <h2 class="section-title">One-Stop Solution for <span>Your Dream Home Construction</span></h2>
-        <div class="decor-line"></div>
+      <div class="decor-line" data-aos="fadeup" data-aos-delay="200"></div>
       </div>
       <div class="row align-items-center">
         <!-- Image Column -->
-        <div class="col-lg-6">
+        <div class="col-lg-6"  data-aos="fade-up">
           <div class="about-image">
             <img src="image/galeery2.webp" alt="Modern Home Design">
           </div>
         </div>
 
-<div class="col-lg-6">
+<div class="col-lg-6"  data-aos="fade-down">
   <div class="about-content mt-5">
     <h2>Creating <span style="color:#FEC902;">Elegant Spaces</span></h2>
     <p>
@@ -345,7 +300,7 @@
         <p>
       Through close collaboration, we turn ideas into inspiring environments — tailored perfectly to your taste, purpose, and future needs. The result: a signature space that tells your story with flair.
     </p>
-    <a href="#" class="btn btn-yellow-outline mt-3">Explore Our Creations</a>
+    <a href="about.html" class="btn btn-yellow-outline mt-3">Explore Our Creations</a>
   </div>
 </div>
 
@@ -353,85 +308,90 @@
       </div>
     </div>
   </section>
-
 <!-- services -->
-  <div class="container py-5">
-    <div class="row align-items-center">
-        <div class="col-lg-6">
-        <p class="offer-title">Our Offerings</p>
-        <h2 class="main-heading mb-3">Crafting Homes, Beyond Construction!</h2>
-        </div>
-                <div class="col-lg-6">
-                    <p class="offer-description">
-          Here each offering is tailored to manifest your dream home. From expertly constructed spaces to harmoniously designed interiors, we specialize in bringing your distinctive style to life.
-        </p>
+<div class="container py-5" id="services">
+  <div class="row align-items-center">
+    
+    <div class="col-lg-6" data-aos="fad-up">
+      <p class="offer-title">Our Offerings</p>
+      <h2 class="main-heading mb-3">Crafting Homes, Beyond Construction!</h2>
+    </div>
 
+    <div class="col-lg-6" data-aos="fade-down">
+      <p class="offer-description">
+        Here each offering is tailored to manifest your dream home. From expertly constructed spaces to harmoniously designed interiors, we specialize in bringing your distinctive style to life.
+      </p>
+    </div>
+
+    <!-- Image Column -->
+    <div class="col-lg-6 mb-4 mb-md-0" data-aos="zoom-in">
+      <img src="image/gallery6.jpg" alt="Modern Home" class="img-fluid rounded shadow service-imh">
+    </div>
+
+    <!-- Content Column -->
+    <div class="col-lg-6 mt-3" data-aos="fade-up">
+
+      <!-- Offering 1 -->
+      <div class="d-flex align-items-start mb-4">
+        <div class="me-3 offer-number">1</div>
+        <div>
+          <h5 class="offer-heading mb-1">Residential Construction</h5>
+          <p class="offer-description">Creating comfortable, stylish, and functional living spaces tailored to your lifestyle and budget.</p>
         </div>
-      <!-- Image Column -->
-      <div class="col-lg-6 mb-4 mb-md-0">
-        <img src="image/gallery6.jpg" alt="Modern Home" class="img-fluid rounded shadow service-imh">
+        <div class="ms-auto">
+  <a href="services.html">
+    <i class="fas fa-arrow-right"></i>
+  </a>
+</div>
+
       </div>
 
-      <!-- Content Column -->
-      <div class="col-lg-6 mt-3">
-        <!-- Offering 3 -->
-        <div class="d-flex align-items-start mb-4">
-          <div class="me-3 offer-number">1</div>
-          <div>
-            <h5 class="offer-heading mb-1">Residential Construction</h5>
-            <p class="offer-description">Creating comfortable, stylish, and functional living spaces tailored to your lifestyle and budget.</p>
-          </div>
-          <div class="ms-auto">
-            <svg class="arrow-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </div>
+      <!-- Offering 2 -->
+      <div class="d-flex align-items-start mb-4">
+        <div class="me-3 offer-number">2</div>
+        <div>
+          <h5 class="offer-heading mb-1">Commercial Construction</h5>
+          <p class="offer-description">From offices to retail spaces, we build environments that drive business success and growth.</p>
         </div>
-
-        <!-- Offering 4 -->
-        <div class="d-flex align-items-start mb-4">
-          <div class="me-3 offer-number">2</div>
-          <div>
-            <h5 class="offer-heading mb-1">Commercial Construction</h5>
-            <p class="offer-description">From offices to retail spaces, we build environments that drive business success and growth.</p>
-          </div>
-          <div class="ms-auto">
-            <svg class="arrow-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </div>
-        </div>
-
-        <!-- Offering 5 -->
-        <div class="d-flex align-items-start">
-          <div class="me-3 offer-number">3</div>
-          <div>
-            <h5 class="offer-heading mb-1">Industrial Construction</h5>
-            <p class="offer-description">Robust, scalable, and efficient infrastructure for industrial operations and manufacturing needs.</p>
-          </div>
-          <div class="ms-auto">
-            <svg class="arrow-icon" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-          </div>
-        </div>
-
+<div class="ms-auto">
+  <a href="services.html">
+    <i class="fas fa-arrow-right"></i>
+  </a>
+</div>
 
       </div>
+
+      <!-- Offering 3 -->
+      <div class="d-flex align-items-start">
+        <div class="me-3 offer-number">3</div>
+        <div>
+          <h5 class="offer-heading mb-1">Industrial Construction</h5>
+          <p class="offer-description">Robust, scalable, and efficient infrastructure for industrial operations and manufacturing needs.</p>
+        </div>
+<div class="ms-auto">
+  <a href="services.html">
+    <i class="fas fa-arrow-right"></i>
+  </a>
+</div>
+
+      </div>
+
     </div>
   </div>
+</div>
+
 
 <!-- Why Choose Us -->
 <div class="why">
   <div class="container py-5">
-    <div class="text-center mb-4 section-title">
+    <div class="text-center mb-4 section-title" data-aos="fade-down">
       <h2><span class="grad-text">Why Choose Us?</span></h2>
       <h4>Delivering Excellence in Every Brick and Beam</h4>
     </div>
 
     <div class="row gy-4">
       <!-- Card 1 -->
-      <div class="col-sm-6 col-lg-3">
+      <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
         <div class="icon-box p-4 border rounded h-100 d-flex flex-column">
           <div class="d-flex align-items-start mb-3">
             <div class="icon-circle">
@@ -446,7 +406,7 @@
       </div>
 
       <!-- Card 2 -->
-      <div class="col-sm-6 col-lg-3">
+      <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
         <div class="icon-box p-4 border rounded h-100 d-flex flex-column">
           <div class="d-flex align-items-start mb-3">
             <div class="icon-circle">
@@ -461,7 +421,7 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="col-sm-6 col-lg-3">
+      <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
         <div class="icon-box p-4 border rounded h-100 d-flex flex-column">
           <div class="d-flex align-items-start mb-3">
             <div class="icon-circle">
@@ -476,7 +436,7 @@
       </div>
 
       <!-- Card 4 -->
-      <div class="col-sm-6 col-lg-3">
+      <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
         <div class="icon-box p-4 border rounded h-100 d-flex flex-column">
           <div class="d-flex align-items-start mb-3">
             <div class="icon-circle">
@@ -492,6 +452,7 @@
     </div>
   </div>
 </div>
+
 
 <!-- logos -->
 <section class="logos ">
@@ -530,65 +491,73 @@
   </div>
 </section>
 
-<!-- counter -->
+<!-- Counter Section -->
 <section class="counter-one">
   <div class="container">
     <div class="counter-one__inner">
       <div class="counter-one__bg float-bob-y"
-           style="background-image: url(https://unicktheme.com/bixola/assets/images/backgrounds/counter-one-bg.png);"></div>
+           style="background-image: url(image/counter-one-bg.png);"></div>
       <ul class="counter-one__count-list list-unstyled">
+        
+        <!-- Years of Experience -->
         <li>
           <div class="counter-one__icon">
             <i class="fas fa-calendar-alt"></i>
           </div>
-          <div class="counter-one__count count-box counted">
-            <h3 class="count-text" data-stop="10" data-speed="1500">10</h3>
+          <div class="counter-one__count count-box">
+            <h3 class="count-text" data-stop="10" data-speed="1500">0</h3>
           </div>
           <p class="counter-one__text">Years of Experience</p>
         </li>
+
+        <!-- Team Members -->
         <li>
           <div class="counter-one__icon">
             <i class="fas fa-users"></i>
           </div>
-          <div class="counter-one__count count-box counted">
-            <h3 class="count-text" data-stop="89" data-speed="1500">89</h3>
+          <div class="counter-one__count count-box">
+            <h3 class="count-text" data-stop="89" data-speed="1500">0</h3>
           </div>
           <p class="counter-one__text">Team Members</p>
         </li>
+
+        <!-- Successful Projects -->
         <li>
           <div class="counter-one__icon">
             <i class="fas fa-tasks"></i>
           </div>
-          <div class="counter-one__count count-box counted">
-            <h3 class="count-text" data-stop="789" data-speed="1500">789</h3>
-            <span>+</span>
+          <div class="counter-one__count count-box">
+            <h3 class="count-text" data-stop="789" data-speed="1500">0</h3><span>+</span>
           </div>
           <p class="counter-one__text">Successful Projects</p>
         </li>
+
+        <!-- Satisfied Clients -->
         <li>
           <div class="counter-one__icon">
             <i class="fas fa-smile"></i>
           </div>
-          <div class="counter-one__count count-box counted">
-            <h3 class="count-text" data-stop="650" data-speed="1500">650</h3>
-            <span>+</span>
+          <div class="counter-one__count count-box">
+            <h3 class="count-text" data-stop="650" data-speed="1500">0</h3><span>+</span>
           </div>
           <p class="counter-one__text">Satisfied Clients</p>
         </li>
+        
       </ul>
     </div>
   </div>
 </section>
+
 <!-- project -->
 <section class="project-gallery py-5">
   <div class="container">
-    <div class="text-center mb-5">
+    <div class="text-center mb-5" data-aos="fade-down">
       <span class="text-uppercase text-warning fw-bold d-block mb-2">Gallery</span>
       <h2 class="fw-bold">Our Latest Work</h2>
     </div>
 
     <!-- Filter Buttons -->
-    <div class="d-flex justify-content-center flex-wrap gap-3 mb-4 filter-buttons">
+    <div class="d-flex justify-content-center flex-wrap gap-3 mb-4 filter-buttons" data-aos="fade-up" data-aos-delay="100">
       <button class="btn btn-outline-primary active" data-filter="all">All</button>
       <button class="btn btn-outline-primary" data-filter="residential">Residential Construction</button>
       <button class="btn btn-outline-primary" data-filter="commercial">Commercial Construction</button>
@@ -603,7 +572,7 @@
     <div class="row g-4 gallery-grid">
       <div class="col-md-6 col-lg-4 gallery-item" data-category="residential">
         <div class="card border-0 shadow-sm h-100">
-          <img src="https://rightcon.in/wp-content/uploads/2024/07/Artboard-1-100-8-min.jpg" class="card-img-top" alt="Residential Construction">
+          <img src="image/residen.jpg" class="card-img-top" alt="Residential Construction">
           <div class="card-body">
             <h5 class="card-title">Electronic City</h5>
             <p class="text-muted mb-0">Residential </p>
@@ -613,7 +582,7 @@
 
       <div class="col-md-6 col-lg-4 gallery-item" data-category="commercial">
         <div class="card border-0 shadow-sm h-100">
-          <img src="https://www.solutionsgc.com/wp-content/uploads/commercial-tenant-improvement-work-at-san-francisco-2-832x624.jpg" class="card-img-top" alt="Commercial Construction">
+          <img src="image/comerical.jpg" class="card-img-top" alt="Commercial Construction">
           <div class="card-body">
             <h5 class="card-title">Indiranagar Complex</h5>
             <p class="text-muted mb-0">Commercial </p>
@@ -623,7 +592,7 @@
 
       <div class="col-md-6 col-lg-4 gallery-item" data-category="industrial">
         <div class="card border-0 shadow-sm h-100">
-          <img src="https://static.vecteezy.com/system/resources/thumbnails/027/170/531/small/generative-ai-large-warehouse-exterior-industry-building-distribution-retail-center-part-of-storage-and-shipping-system-photo.jpg" class="card-img-top" alt="Industrial Construction">
+          <img src="image/industry.jpg" class="card-img-top" alt="Industrial Construction">
           <div class="card-body">
             <h5 class="card-title">Peenya Industrial Shed</h5>
             <p class="text-muted mb-0">Industrial</p>
@@ -633,7 +602,7 @@
 
       <div class="col-md-6 col-lg-4 gallery-item" data-category="residential">
         <div class="card border-0 shadow-sm h-100">
-          <img src="https://rightcon.in/wp-content/uploads/2024/01/Project-Vijay-Residency.webp" class="card-img-top" alt="Floor Plan">
+          <img src="image/Residency.webp" class="card-img-top" alt="Floor Plan">
           <div class="card-body">
             <h5 class="card-title">Varthur</h5>
             <p class="text-muted mb-0">Residential</p>
@@ -644,7 +613,7 @@
 
       <div class="col-md-6 col-lg-4 gallery-item" data-category="commercial">
         <div class="card border-0 shadow-sm h-100">
-          <img src="https://www.solutionsgc.com/wp-content/uploads/sanfrancisco-construction-work-of-general-contractor-constructive-solutions-832x624.jpg" class="card-img-top" alt="Interior">
+          <img src="image/comerical1.jpg" class="card-img-top" alt="Interior">
           <div class="card-body">
             <h5 class="card-title">GPR Royale Layout</h5>
             <p class="text-muted mb-0">Commercial</p>
@@ -654,7 +623,7 @@
 
       <div class="col-md-6 col-lg-4 gallery-item" data-category="residential">
         <div class="card border-0 shadow-sm h-100">
-          <img src="https://rightcon.in/wp-content/uploads/2024/12/WEBSITE-PROJECT-01-PRUN.jpg" class="card-img-top" alt="Interior">
+          <img src="image/redis.jpg" class="card-img-top" alt="Interior">
           <div class="card-body">
             <h5 class="card-title">GPR Royale </h5>
             <p class="text-muted mb-0">Residential</p>
@@ -665,20 +634,21 @@
   </div>
 </section>
 
+
 <!-- contact -->
   <section class="contact-section">
     <!-- Left: Image -->
-    <div class="contact-img">
-      <img src="https://img.freepik.com/free-photo/customer-service-handsome-guy-with-headset-laptop-suit-typing-computer_140725-164761.jpg?uid=R189150807&ga=GA1.1.29269001.1752921385&semt=ais_hybrid&w=740&q=80" alt="Contact Expert" />
+    <div class="contact-img"  data-aos="fade-down">
+      <img src="image/contact.avif" alt="Contact Expert" />
       <!-- Replace with your image or use uploaded one -->
     </div>
 
     <!-- Right: Text and Buttons -->
-    <div class="contact-text">
+    <div class="contact-text" data-aos="fade-down">
       <h2>Contact With Our Expert</h2>
       <p>Book your appointment to talk to our experts who will assist you with all your doubts regarding our services.</p>
       <div class="contact-buttons">
-        <a href="#" class="btn-contact"><i class="fas fa-phone"></i> Contact</a>
+        <a href="contact.html" class="btn-contact"><i class="fas fa-phone"></i> Contact</a>
       </div>
     </div>
   </section>
@@ -736,94 +706,102 @@
   </div>
 
 
-
 <!-- faq -->
-          <section class="faq-one">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-5 col-lg-5">
-                        <div class="faq-one__left">
-                            <div class="section-title text-left">
-                                <div class="section-title__tagline-box">
-                                    <p class="section-subtitle__tagline">FAQs</p>
-                                </div>
-                                <h2 class="section-title__title">Frequently asked questions</h2>
-                            </div>
-                            <div class="faq-one__img">
-                                <img src="https://unicktheme.com/bixola/assets/images/resources/faq-one-img-1.jpg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-7 col-lg-7">
-                        <div class="faq-one__right">
-                            <div class="accrodion-grp faq-one-accrodion" data-grp-name="faq-one-accrodion">
-                                <div class="accrodion">
-                                    <div class="accrodion-title">
-                                        <h4><span>Q1.</span>What services are included in your construction projects?</h4>
-                                    </div>
-                                    <div class="accrodion-content" style="display: none;">
-                                        <div class="inner">
-                                            <p>Our construction services include project planning, site preparation, building construction, electrical and plumbing installation, interior finishing, and final inspections. We manage each phase from start to finish.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accrodion">
-                                    <div class="accrodion-title">
-                                        <h4><span>Q2.</span>How long does a typical construction project take?</h4>
-                                    </div>
-                                    <div class="accrodion-content" style="display: none;">
-                                        <div class="inner">
-                                            <p>Project duration varies depending on the size and complexity. On average, residential projects take 3–6 months, while commercial buildings may take 6–12 months or longer.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accrodion">
-                                    <div class="accrodion-title">
-                                        <h4><span>Q3.</span>Do you handle permits and inspections?</h4>
-                                    </div>
-                                    <div class="accrodion-content" style="display: none;">
-                                        <div class="inner">
-                                            <p>Yes, we manage all necessary building permits and coordinate inspections with local authorities to ensure everything is up to code throughout the construction process.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accrodion">
-                                    <div class="accrodion-title">
-                                        <h4><span>Q4.</span>Can you help with design and architecture?</h4>
-                                    </div>
-                                    <div class="accrodion-content" style="display: none;">
-                                        <div class="inner">
-                                            <p>Absolutely. We work closely with architects and designers to bring your vision to life. Whether you need full architectural services or just design consultation, we can assist.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accrodion active">
-                                    <div class="accrodion-title">
-                                        <h4><span>Q5.</span>What types of construction projects do you specialize in?</h4>
-                                    </div>
-                                    <div class="accrodion-content" style="">
-                                        <div class="inner">
-                                            <p>We specialize in residential homes, commercial buildings, office spaces, retail stores, and renovation or remodeling projects. No matter the scale, we bring expert craftsmanship to every job.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
+<section class="faq-one" data-aos="fade-up">
+  <div class="container">
+    <div class="row">
+      
+      <!-- Left Column -->
+      <div class="col-xl-5 col-lg-5" data-aos="fade-up" data-aos-delay="100">
+        <div class="faq-one__left">
+          <div class="section-title text-left">
+            <div class="section-title__tagline-box">
+              <p class="section-subtitle__tagline">FAQs</p>
             </div>
-        </section>
+            <h2 class="section-title__title">Frequently asked questions</h2>
+          </div>
+          <div class="faq-one__img">
+            <img src="image/faq-one-img-1.jpg" alt="" data-aos="zoom-in">
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-xl-7 col-lg-7" data-aos="fade-up" data-aos-delay="200">
+        <div class="faq-one__right">
+          <div class="accrodion-grp faq-one-accrodion" data-grp-name="faq-one-accrodion">
+
+            <div class="accrodion" data-aos="fade-up" data-aos-delay="100">
+              <div class="accrodion-title">
+                <h4><span>Q1.</span>What services are included in your construction projects?</h4>
+              </div>
+              <div class="accrodion-content" style="display: none;">
+                <div class="inner">
+                  <p>Our construction services include project planning, site preparation, building construction, electrical and plumbing installation, interior finishing, and final inspections. We manage each phase from start to finish.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accrodion" data-aos="fade-up" data-aos-delay="150">
+              <div class="accrodion-title">
+                <h4><span>Q2.</span>How long does a typical construction project take?</h4>
+              </div>
+              <div class="accrodion-content" style="display: none;">
+                <div class="inner">
+                  <p>Project duration varies depending on the size and complexity. On average, residential projects take 3–6 months, while commercial buildings may take 6–12 months or longer.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accrodion" data-aos="fade-up" data-aos-delay="200">
+              <div class="accrodion-title">
+                <h4><span>Q3.</span>Do you handle permits and inspections?</h4>
+              </div>
+              <div class="accrodion-content" style="display: none;">
+                <div class="inner">
+                  <p>Yes, we manage all necessary building permits and coordinate inspections with local authorities to ensure everything is up to code throughout the construction process.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accrodion" data-aos="fade-up" data-aos-delay="250">
+              <div class="accrodion-title">
+                <h4><span>Q4.</span>Can you help with design and architecture?</h4>
+              </div>
+              <div class="accrodion-content" style="display: none;">
+                <div class="inner">
+                  <p>Absolutely. We work closely with architects and designers to bring your vision to life. Whether you need full architectural services or just design consultation, we can assist.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accrodion active" data-aos="fade-up" data-aos-delay="300">
+              <div class="accrodion-title">
+                <h4><span>Q5.</span>What types of construction projects do you specialize in?</h4>
+              </div>
+              <div class="accrodion-content" style="">
+                <div class="inner">
+                  <p>We specialize in residential homes, commercial buildings, office spaces, retail stores, and renovation or remodeling projects. No matter the scale, we bring expert craftsmanship to every job.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 
 <!-- Footer Section -->
-<footer class="footer-section text-white py-5">
+<footer class="footer-section text-white py-5" data-aos="fade-up">
   <div class="container">
-    <!-- Add gx-4 here for equal column spacing -->
-<div class="row gx-5 gy-4 align-items-start text-center text-md-start">
+    <div class="row gx-5 gy-4 align-items-start text-center text-md-start">
       
       <!-- Column 1: Location -->
-      <div class="col-md-3">
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
         <p><i class="fas fa-map-marker-alt me-2 text-warning"></i>Bangalore, Dubai</p>
         <p><i class="fas fa-phone me-2 text-warning"></i><a href="tel:+917094858696">+91 70948 58696</a></p>
         <p><i class="fas fa-envelope me-2 text-warning"></i><a href="mailto:puzzle@diplomats.co.in">puzzle@diplomats.co.in</a></p>
@@ -836,7 +814,7 @@
       </div>
 
       <!-- Column 2: Quick Links -->
-      <div class="col-md-3">
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
         <h5 class="fw-bold mb-3">Quick Links</h5>
         <ul class="list-unstyled">
           <li><a href="index.html" class="footer-link">Home</a></li>
@@ -848,15 +826,15 @@
       </div>
 
       <!-- Column 3: About and Logo -->
-      <div class="col-md-3 text-md-center">
-        <img src="images/logo.png" alt=" Logo" class="mb-3" style="width: 130px;">
+      <div class="col-md-3 text-md-center" data-aos="fade-up" data-aos-delay="300">
+        <img src="images/logo.png" alt="Logo" class="mb-3" style="width: 130px;">
         <p>
           construction® is a one-stop solution for all your home construction needs, providing turnkey, end-to-end services tailored to your lifestyle and vision.
         </p>
       </div>
 
       <!-- Column 4: Services -->
-      <div class="col-md-3" id="foo">
+      <div class="col-md-3" id="foo" data-aos="fade-up" data-aos-delay="400">
         <h5 class="fw-bold mb-3">Services</h5>
         <ul class="list-unstyled">
           <li><a href="service.html" class="footer-link">Residential</a></li>
@@ -869,14 +847,15 @@
     </div>
 
     <!-- Divider -->
-    <hr class="border-light mt-4">
+    <hr class="border-light mt-4" data-aos="zoom-in" data-aos-delay="450">
 
     <!-- Copyright -->
-    <div class="text-center pt-2">
+    <div class="text-center pt-2" data-aos="fade-in" data-aos-delay="500">
       <p class="mb-0">&copy; 2025 construction®. All rights reserved.</p>
     </div>
   </div>
 </footer>
+
 
 
 
@@ -889,7 +868,32 @@
 <!-- Owl Carousel JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
+<script>
+  $(document).ready(function () {
+    $(".main-slider-carousel").owlCarousel({
+      items: 1,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      nav:false,
+      dots: true,
+      animateOut: 'fadeOut',
+      animateIn: 'fadeIn',
+      // navText: [
+      //   "<span class='fas fa-chevron-left'></span>",
+      //   "<span class='fas fa-chevron-right'></span>"
+      // ]
+    });
+  });
+</script>
+
   <script src="js/script.js"></script>
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 
 
 </body>

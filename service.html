@@ -21,7 +21,8 @@
   <!-- Owl Carousel CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
-
+<!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -30,46 +31,54 @@
 <div id="preloader">
   <div class="spinner"></div>
 </div>
-
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg sticky-top bg-white shadow-sm">
-  <div class="container d-flex align-items-center justify-content-between">
-    <div class="d-flex align-items-center">
-      <a class="navbar-brand fw-bold d-flex align-items-center text-dark me-3" href="index.html">
-        <img src="images/logo.png" alt="Logo" height="40" class="me-2">
-      </a>
+  <div class="container">
+    <div class="row w-100 align-items-center flex-nowrap">
+      
+      <!-- Left: Logo + Location -->
+      <div class="col d-flex align-items-center">
+        <a class="navbar-brand fw-bold d-flex align-items-center text-dark me-3" href="index.html">
+          <img src="images/logo.png" alt="Logo" height="40" class="me-2">
+        </a>
 
-      <div class="dropdown">
-        <button class="btn dropdown-toggle" type="button" id="locationDropdown" data-bs-toggle="dropdown">
-          Bangalore
-        </button>
-<ul class="dropdown-menu" aria-labelledby="locationDropdown">
-  <li><a class="dropdown-item location-option" href="#" data-location="Chennai">Chennai</a></li>
-  <li><a class="dropdown-item location-option" href="#" data-location="Coimbatore">Coimbatore</a></li>
-  <li><a class="dropdown-item location-option" href="#" data-location="Madurai">Madurai</a></li>
-  <li><a class="dropdown-item location-option" href="#" data-location="Trichy">Trichy</a></li>
-  <li><a class="dropdown-item location-option" href="#" data-location="Salem">Salem</a></li>
-</ul>
-
+        <!-- Location Dropdown -->
+        <div class="dropdown">
+          <button class="btn dropdown-toggle" type="button" id="locationDropdown" data-bs-toggle="dropdown">
+            Location
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="locationDropdown">
+            <li><a class="dropdown-item location-option" href="#" data-location="Bangalore">Bangalore</a></li>
+            <li><a class="dropdown-item location-option" href="#" data-location="Chennai">Chennai</a></li>
+            <li><a class="dropdown-item location-option" href="#" data-location="Coimbatore">Coimbatore</a></li>
+            <li><a class="dropdown-item location-option" href="#" data-location="Madurai">Madurai</a></li>
+            <li><a class="dropdown-item location-option" href="#" data-location="Trichy">Trichy</a></li>
+            <li><a class="dropdown-item location-option" href="#" data-location="Salem">Salem</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <!-- Center: Menu -->
+      <div class="col-auto d-none d-lg-block">
+        <ul class="navbar-nav mx-auto flex-row gap-3">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="howitwork.html">How it Works</a></li>
+          <li class="nav-item"><a class="nav-link" href="ourproject.html">Our Projects</a></li>
+        </ul>
+      </div>
 
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-        <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="howitwork.html">How it Works</a></li>
-        <li class="nav-item"><a class="nav-link" href="ourproject.html">Our Projects</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
-      </ul>
+<div class="col d-flex justify-content-end align-items-center gap-3" >
+  <a href="contact.html" class="btn btn-sm btn-primary px-3" style="background-color: #001489 !important; font-size: 18px;">
+    Get Build Quote
+  </a>
+</div>
+
     </div>
   </div>
 </nav>
+
 
 
 <!-- Service Banner -->
@@ -79,39 +88,41 @@
     <p class="lead">Discover our wide range of building solutions across residential, industrial, and commercial sectors.</p>
   </div>
 </div>
-
-<section class="project-type-section bg-light py-5">
+<section class="project-type-section bg-light py-5" data-aos="fade-up">
   <div class="container">
-        <!-- Section Title -->
-            <div class="text-center mb-5">
+
+    <!-- Section Title -->
+    <div class="text-center mb-5" data-aos="fade-down">
       <span class="text-uppercase text-warning fw-bold d-block mb-2">Our services</span>
       <h2 class="fw-bold">Our Construction Expertise</h2>
     </div>
 
-    <!-- 1. Residential (row) -->
-    <div class="row align-items-center mb-5">
-      <div class="col-md-6">
-        <img src="https://rightcon.in/wp-content/uploads/2025/04/lokesh-front-img.jpg" alt="Residential Construction" class="img-fluid rounded shadow-sm">
+    <!-- 1. Residential -->
+    <div class="row align-items-center mb-5" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-md-6" data-aos="zoom-in-right">
+        <img src="image/res.jpg" alt="Residential Construction" class="img-fluid rounded shadow-sm">
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6" data-aos="fade-left" data-aos-delay="150">
         <h3 class="fw-bold">Residential Construction</h3>
         <p>We bring your dream home to life—from elegant villas to modern apartments. Our residential projects focus on comfort, sustainability, and timeless design tailored to your lifestyle.</p>
+        <p>From concept to completion, we ensure every home reflects your personality and functional needs. We use the latest construction technologies, energy-efficient materials, and smart home integrations to enhance living experiences. Our expert architects and engineers collaborate closely with clients to deliver unmatched quality and peace of mind.</p>
         <ul class="list-unstyled">
-          <li> Villas & Bungalows</li>
-          <li> Independent Homes</li>
-          <li> Residential Apartments</li>
+          <li>Villas & Bungalows</li>
+          <li>Independent Homes</li>
+          <li>Residential Apartments</li>
         </ul>
       </div>
     </div>
 
-    <!-- 2. Commercial (row-reverse) -->
-    <div class="row align-items-center mb-5 flex-md-row-reverse">
-      <div class="col-md-6">
-        <img src="https://img.freepik.com/free-photo/modern-architecture-reflective-glass-building-with-cityscape_23-2152006094.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="Commercial Construction" class="img-fluid rounded shadow-sm">
+    <!-- 2. Commercial -->
+    <div class="row align-items-center mb-5 flex-md-row-reverse" data-aos="fade-up" data-aos-delay="200">
+      <div class="col-md-6" data-aos="zoom-in-left">
+        <img src="image/come.avif" alt="Commercial Construction" class="img-fluid rounded shadow-sm">
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6" data-aos="fade-right" data-aos-delay="250">
         <h3 class="fw-bold">Commercial Construction</h3>
         <p>We design and deliver commercial spaces that drive business success—retail outlets, office complexes, and mixed-use buildings with smart planning and execution.</p>
+        <p>Whether you're launching a flagship store, building a multi-level corporate hub, or developing a mixed-use center, we ensure every space promotes productivity, customer experience, and brand identity. Our commercial structures are built to meet compliance, enhance aesthetics, and support long-term growth.</p>
         <ul class="list-unstyled">
           <li>Office Complexes</li>
           <li>Showrooms & Retail Spaces</li>
@@ -120,14 +131,15 @@
       </div>
     </div>
 
-    <!-- 3. Industrial (row) -->
-    <div class="row align-items-center">
-      <div class="col-md-6">
-        <img src="https://img.freepik.com/free-photo/industrial-park-factory-building-warehouse_1417-1911.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="Industrial Construction" class="img-fluid rounded shadow-sm">
+    <!-- 3. Industrial -->
+    <div class="row align-items-center" data-aos="fade-up" data-aos-delay="300">
+      <div class="col-md-6" data-aos="zoom-in-right">
+        <img src="image/industrial.avif" alt="Industrial Construction" class="img-fluid rounded shadow-sm">
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6" data-aos="fade-left" data-aos-delay="350">
         <h3 class="fw-bold">Industrial Construction</h3>
         <p>Our industrial solutions focus on efficiency and durability. From warehouses to factories, we meet rigorous industry standards for safety, space, and scalability.</p>
+        <p>We understand the unique demands of industrial environments—speed of construction, load-bearing design, ventilation, and large-scale storage. Our team specializes in optimizing layouts for logistics, heavy machinery, and future expansion. Every structure is engineered for maximum performance, reliability, and compliance with local and global standards.</p>
         <ul class="list-unstyled">
           <li>Warehouses & Storage Facilities</li>
           <li>Manufacturing Plants</li>
@@ -140,11 +152,12 @@
 </section>
 
 
+
 <div class="container my-5">
   <!-- Tabs -->
 <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap">
   <div>
-    <h3 class="section-title text-start mb-1">Our Projects</h3>
+    <h3 class="section-title text-start mb-1">Industries we serve</h3>
     <p class="section-subtitle" id="ka">We have completed more than 200 highly prestigious projects in the field of construction.</p>
   </div>
   <div class="mt-3 mt-md-0">
@@ -175,46 +188,48 @@
     <!-- Residential -->
     <div class="tab-pane fade show active" id="res" role="tabpanel">
       <div class="row g-4">
-        <div class="col-md-4"><div class="card h-100"><img src="https://img.freepik.com/premium-photo/luxury-house-with-pool_1048944-2069086.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-house-user me-2"></i>Individual Villas</h5></div></div></div>
-        <div class="col-md-4"><div class="card h-100"><img src="https://img.freepik.com/premium-photo/house-with-sign-that-says-word-side_788919-49.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-city me-2"></i>Duplex Houses</h5></div></div></div>
-        <div class="col-md-4"><div class="card h-100"><img src="https://4.imimg.com/data4/QI/HR/MY-2/sukruti.jpg" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-people-roof me-2"></i>Gated Community Villas</h5></div></div></div>
-        <div class="col-md-4"><div class="card h-100"><img src="https://img.freepik.com/premium-photo/kuantan-malaysia-october-17th-2024-buildings-are-constructed-with-mix-concrete-glass-giving-them-sleek-contemporary-appearance_750630-9246.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-building me-2"></i>Apartments & Flats</h5></div></div></div>
-        <div class="col-md-4"><div class="card h-100"><img src="https://img.freepik.com/free-photo/row-houses-bristol-england_53876-143002.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-house-chimney me-2"></i>Row Houses</h5></div></div></div>
-        <div class="col-md-4"><div class="card h-100"><img src="https://img.freepik.com/premium-photo/white-house-with-fence-gate-that-says-welcome-valley_959800-11398.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-tractor me-2"></i>Farmhouses</h5></div></div></div>
-        <div class="col-md-4"><div class="card h-100"><img src="https://images.squarespace-cdn.com/content/v1/5abbea6fc258b4f56d09219e/1579276583945-NN6HHM5J5RZRISHWI9T8/Studio+Shed+Summit+Series.jpg?format=2500w" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-couch me-2"></i>Studio Homes</h5></div></div></div>
-        <div class="col-md-4"><div class="card h-100"><img src="https://img.freepik.com/premium-photo/love-fitness-senior-couple-walking-bonding-happiness-with-romance-loving-winter-partners-mature-man-old-woman-outdoor-retirement-relationship-with-joy-nature-wellness_590464-172311.jpg?w=1060" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-person-cane me-2"></i>Senior Living Homes</h5></div></div></div>
+        <div class="col-md-4" data-aos="fade-up"><div class="card h-100"><img src="https://img.freepik.com/premium-photo/luxury-house-with-pool_1048944-2069086.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-house-user me-2"></i>Individual Villas</h5></div></div></div>
+        <div class="col-md-4" data-aos="fade-up"><div class="card h-100"><img src="https://img.freepik.com/premium-photo/house-with-sign-that-says-word-side_788919-49.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-city me-2"></i>Duplex Houses</h5></div></div></div>
+        <div class="col-md-4"data-aos="fade-up"><div class="card h-100"><img src="https://4.imimg.com/data4/QI/HR/MY-2/sukruti.jpg" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-people-roof me-2"></i>Gated Community Villas</h5></div></div></div>
+        <div class="col-md-4"data-aos="fade-up"><div class="card h-100"><img src="https://img.freepik.com/premium-photo/kuantan-malaysia-october-17th-2024-buildings-are-constructed-with-mix-concrete-glass-giving-them-sleek-contemporary-appearance_750630-9246.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-building me-2"></i>Apartments & Flats</h5></div></div></div>
+        <div class="col-md-4" data-aos="fade-up"><div class="card h-100"><img src="https://img.freepik.com/free-photo/row-houses-bristol-england_53876-143002.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-house-chimney me-2"></i>Row Houses</h5></div></div></div>
+        <div class="col-md-4" data-aos="fade-up"><div class="card h-100"><img src="https://img.freepik.com/premium-photo/white-house-with-fence-gate-that-says-welcome-valley_959800-11398.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-tractor me-2"></i>Farmhouses</h5></div></div></div>
+        <div class="col-md-4" data-aos="fade-up"><div class="card h-100"><img src="https://images.squarespace-cdn.com/content/v1/5abbea6fc258b4f56d09219e/1579276583945-NN6HHM5J5RZRISHWI9T8/Studio+Shed+Summit+Series.jpg?format=2500w" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-couch me-2"></i>Studio Homes</h5></div></div></div>
+        <div class="col-md-4" data-aos="fade-up"><div class="card h-100"><img src="https://img.freepik.com/premium-photo/love-fitness-senior-couple-walking-bonding-happiness-with-romance-loving-winter-partners-mature-man-old-woman-outdoor-retirement-relationship-with-joy-nature-wellness_590464-172311.jpg?w=1060" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-person-cane me-2"></i>Senior Living Homes</h5></div></div></div>
+      <div class="col-md-4" data-aos="fade-up"><div class="card h-100"><img src="https://img.freepik.com/free-photo/view-city-with-apartment-buildings-green-vegetation_23-2150439311.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" alt="Eco Homes"><div class="card-body"><h5 class="card-title"><i class="fas fa-leaf me-2"></i>Eco-Friendly Homes</h5></div>
+  </div>
+</div>
+
       </div>
     </div>
 
     <!-- Industrial -->
     <div class="tab-pane fade" id="ind" role="tabpanel">
       <div class="row g-4">
-        <div class="col-md-4"><div class="card h-100"><img src="https://img.freepik.com/free-photo/factory-workshop-interior-machines-glass-production-background_645730-396.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-industry me-2"></i>Manufacturing Units</h5></div></div></div>
-        <div class="col-md-4"><div class="card h-100"><img src="https://img.freepik.com/free-photo/warehouse-storage-interior-with-shelves-loaded-with-goods_342744-1484.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-warehouse me-2"></i>Warehouses & Storage Facilities</h5></div></div></div>
-        <div class="col-md-4"><div class="card h-100"><img src="https://img.freepik.com/free-photo/industrial-park-factory-building-warehouse_1417-1931.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-toolbox me-2"></i>Industrial Sheds</h5></div></div></div>
-        <div class="col-md-4"><div class="card h-100"><img src="https://cms.ar-racking.com/uploads/2021/06/centro-distribucion-logistica-3.jpg" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-shipping-fast me-2"></i>Logistics & Distribution Centers</h5></div></div></div>
-        <div class="col-md-4"><div class="card h-100"><img src="https://img.freepik.com/free-photo/fresh-groceries-inside-modern-supermarket-no-people-generated-by-ai_188544-42312.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-snowflake me-2"></i>Cold Storage Buildings</h5></div></div></div>
-        <div class="col-md-4"><div class="card h-100"><img src="https://img.freepik.com/premium-photo/gruyeres-switzerland-january-2-2015-process-production-gruyere-cheese-cheese-making-factory-gruyeres-canton-fribourg-switzerland_250132-20595.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-utensils me-2"></i>Food Processing Units</h5></div></div></div>
-        <div class="col-md-4"><div class="card h-100"><img src="https://img.freepik.com/free-photo/close-up-image-lot-coils-with-threads-sewing-workshop_613910-19021.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-shirt me-2"></i>Textile & Garment Factories</h5></div></div></div>
-        <div class="col-md-4"><div class="card h-100"><img src="https://img.freepik.com/free-photo/pharmaceutical-factory-woman-worker-protective-clothing-operating-production-line-sterile-environment_645730-305.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-prescription-bottle-alt me-2"></i>Chemical & Pharmaceutical Plants</h5></div></div></div>
-        <div class="col-md-4"><div class="card h-100"><img src="https://img.freepik.com/free-photo/old-factory-hall-with-equipment-machines-workers_140725-1660.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-tools me-2"></i>Heavy Machinery Workshops</h5></div></div></div>
-        <div class="col-md-4"><div class="card h-100"><img src="https://img.freepik.com/premium-photo/115kv-transformer-feeder-substation_484521-330.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-bolt me-2"></i>Power & Utility Stations</h5></div></div></div>
+        <div class="col-md-4" data-aos="fade-up"><div class="card h-100"><img src="https://img.freepik.com/free-photo/factory-workshop-interior-machines-glass-production-background_645730-396.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-industry me-2"></i>Manufacturing Units</h5></div></div></div>
+        <div class="col-md-4" data-aos="fade-up"><div class="card h-100"><img src="https://img.freepik.com/free-photo/warehouse-storage-interior-with-shelves-loaded-with-goods_342744-1484.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-warehouse me-2"></i>Warehouses & Storage Facilities</h5></div></div></div>
+        <div class="col-md-4" data-aos="fade-up"><div class="card h-100"><img src="https://img.freepik.com/free-photo/industrial-park-factory-building-warehouse_1417-1931.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-toolbox me-2"></i>Industrial Sheds</h5></div></div></div>
+        <div class="col-md-4" data-aos="fade-up"><div class="card h-100"><img src="https://cms.ar-racking.com/uploads/2021/06/centro-distribucion-logistica-3.jpg" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-shipping-fast me-2"></i>Logistics & Distribution Centers</h5></div></div></div>
+        <div class="col-md-4" data-aos="fade-up"><div class="card h-100"><img src="https://img.freepik.com/premium-photo/gruyeres-switzerland-january-2-2015-process-production-gruyere-cheese-cheese-making-factory-gruyeres-canton-fribourg-switzerland_250132-20595.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-utensils me-2"></i>Food Processing Units</h5></div></div></div>
+        <div class="col-md-4" data-aos="fade-up"><div class="card h-100"><img src="https://img.freepik.com/free-photo/close-up-image-lot-coils-with-threads-sewing-workshop_613910-19021.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-shirt me-2"></i>Textile & Garment Factories</h5></div></div></div>
+        <div class="col-md-4" data-aos="fade-up"><div class="card h-100"><img src="https://img.freepik.com/free-photo/pharmaceutical-factory-woman-worker-protective-clothing-operating-production-line-sterile-environment_645730-305.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-prescription-bottle-alt me-2"></i>Chemical & Pharmaceutical Plants</h5></div></div></div>
+        <div class="col-md-4" data-aos="fade-up"><div class="card h-100"><img src="https://img.freepik.com/free-photo/old-factory-hall-with-equipment-machines-workers_140725-1660.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-tools me-2"></i>Heavy Machinery Workshops</h5></div></div></div>
+        <div class="col-md-4" data-aos="fade-up"><div class="card h-100"><img src="https://img.freepik.com/premium-photo/115kv-transformer-feeder-substation_484521-330.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-bolt me-2"></i>Power & Utility Stations</h5></div></div></div>
       </div>
     </div>
 
     <!-- Commercial -->
     <div class="tab-pane fade" id="com" role="tabpanel">
       <div class="row g-4">
-        <div class="col-md-4"><div class="card h-100"><img src="https://img.freepik.com/free-photo/office-buildings_1127-3158.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-briefcase me-2"></i>Office Complexes</h5></div></div></div>
-        <div class="col-md-4"><div class="card h-100"><img src="https://meinhardtindia.com/wp-content/uploads/2017/04/Phoenix-IT-Building.jpg" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-network-wired me-2"></i>IT Parks & Tech Campuses</h5></div></div></div>
-        <div class="col-md-4"><div class="card h-100"><img src="https://img.freepik.com/premium-photo/city-centre-mirdif-dubai-shopping-mall-has-400-stores-food-entertainment-facilities-mall-opened-2010-is-run-by-majid-al-futtaim-properties_141438-3003.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-shopping-cart me-2"></i>Shopping Malls & Retail Stores</h5></div></div></div>
-        <div class="col-md-4"><div class="card h-100"><img src="https://img.freepik.com/free-photo/large-pool-with-hammocks_1203-194.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-hotel me-2"></i>Hotels & Resorts</h5></div></div></div>
-        <div class="col-md-4"><div class="card h-100"><img src="https://img.freepik.com/premium-photo/tokyo-japan-january-09-2018-chefs-are-cooking-restaurant-most-popular-delicious-japanese-snack-food-japan_175935-25.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-coffee me-2"></i>Restaurants & Cafés</h5></div></div></div>
-        <div class="col-md-4"><div class="card h-100"><img src="https://img.freepik.com/premium-photo/brick-building-with-burger-king-side_305343-51998.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-store me-2"></i>Showrooms & Display Centers</h5></div></div></div>
-        <div class="col-md-4"><div class="card h-100"><img src="https://img.freepik.com/free-photo/architecture-independence-palace-ho-chi-minh-city_181624-21243.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-school me-2"></i>Educational Institutions</h5></div></div></div>
-        <div class="col-md-4"><div class="card h-100"><img src="https://content.jdmagicbox.com/v2/comp/bangalore/v2/080pxx80.xx80.150402180034.t8v2/catalogue/aster-cmi-hospital-sahakara-nagar-bangalore-private-hospitals-1efhnxjq5i.jpg" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-hospital me-2"></i>Hospitals & Clinics</h5></div></div></div>
-        <div class="col-md-4"><div class="card h-100"><img src="https://content.jdmagicbox.com/v2/comp/chennai/16/044p3009916/catalogue/inox-cinemas-chandra-metro-mall-virugambakkam-chennai-cinema-halls-68tzaznpj5.jpg" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-film me-2"></i>Multiplexes & Entertainment Hubs</h5></div></div></div>
-        <div class="col-md-4"><div class="card h-100"><img src="https://img.freepik.com/premium-photo/people-subway-station_1048944-25089378.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-chalkboard me-2"></i>Convention & Exhibition Centers</h5></div></div></div>
+        <div class="col-md-4" data-aos="fade-up"><div class="card h-100"><img src="https://img.freepik.com/free-photo/office-buildings_1127-3158.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-briefcase me-2"></i>Office Complexes</h5></div></div></div>
+        <div class="col-md-4" data-aos="fade-up"><div class="card h-100"><img src="https://meinhardtindia.com/wp-content/uploads/2017/04/Phoenix-IT-Building.jpg" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-network-wired me-2"></i>IT Parks & Tech Campuses</h5></div></div></div>
+        <div class="col-md-4" data-aos="fade-up"><div class="card h-100"><img src="https://img.freepik.com/premium-photo/city-centre-mirdif-dubai-shopping-mall-has-400-stores-food-entertainment-facilities-mall-opened-2010-is-run-by-majid-al-futtaim-properties_141438-3003.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-shopping-cart me-2"></i>Shopping Malls & Retail Stores</h5></div></div></div>
+        <div class="col-md-4" data-aos="fade-up"><div class="card h-100"><img src="https://img.freepik.com/free-photo/large-pool-with-hammocks_1203-194.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-hotel me-2"></i>Hotels & Resorts</h5></div></div></div>
+        <div class="col-md-4" data-aos="fade-up"><div class="card h-100"><img src="https://img.freepik.com/premium-photo/tokyo-japan-january-09-2018-chefs-are-cooking-restaurant-most-popular-delicious-japanese-snack-food-japan_175935-25.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-coffee me-2"></i>Restaurants & Cafés</h5></div></div></div>
+        <div class="col-md-4" data-aos="fade-up"><div class="card h-100"><img src="https://img.freepik.com/premium-photo/brick-building-with-burger-king-side_305343-51998.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-store me-2"></i>Showrooms & Display Centers</h5></div></div></div>
+        <div class="col-md-4" data-aos="fade-up"><div class="card h-100"><img src="https://img.freepik.com/free-photo/architecture-independence-palace-ho-chi-minh-city_181624-21243.jpg?uid=R208066470&ga=GA1.1.1679070017.1753435898&semt=ais_hybrid&w=740&q=80" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-school me-2"></i>Educational Institutions</h5></div></div></div>
+        <div class="col-md-4" data-aos="fade-up"><div class="card h-100"><img src="https://content.jdmagicbox.com/v2/comp/bangalore/v2/080pxx80.xx80.150402180034.t8v2/catalogue/aster-cmi-hospital-sahakara-nagar-bangalore-private-hospitals-1efhnxjq5i.jpg" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-hospital me-2"></i>Hospitals & Clinics</h5></div></div></div>
+        <div class="col-md-4" data-aos="fade-up"><div class="card h-100"><img src="https://content.jdmagicbox.com/v2/comp/chennai/16/044p3009916/catalogue/inox-cinemas-chandra-metro-mall-virugambakkam-chennai-cinema-halls-68tzaznpj5.jpg" class="card-img-top"><div class="card-body"><h5 class="card-title"><i class="fas fa-film me-2"></i>Multiplexes & Entertainment Hubs</h5></div></div></div>
       </div>
     </div>
 
@@ -244,15 +259,13 @@
 
 
 
-
 <!-- Footer Section -->
-<footer class="footer-section text-white py-5">
+<footer class="footer-section text-white py-5" data-aos="fade-up">
   <div class="container">
-    <!-- Add gx-4 here for equal column spacing -->
-<div class="row gx-5 gy-4 align-items-start text-center text-md-start">
+    <div class="row gx-5 gy-4 align-items-start text-center text-md-start">
       
       <!-- Column 1: Location -->
-      <div class="col-md-3">
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
         <p><i class="fas fa-map-marker-alt me-2 text-warning"></i>Bangalore, Dubai</p>
         <p><i class="fas fa-phone me-2 text-warning"></i><a href="tel:+917094858696">+91 70948 58696</a></p>
         <p><i class="fas fa-envelope me-2 text-warning"></i><a href="mailto:puzzle@diplomats.co.in">puzzle@diplomats.co.in</a></p>
@@ -265,7 +278,7 @@
       </div>
 
       <!-- Column 2: Quick Links -->
-      <div class="col-md-3">
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
         <h5 class="fw-bold mb-3">Quick Links</h5>
         <ul class="list-unstyled">
           <li><a href="index.html" class="footer-link">Home</a></li>
@@ -277,15 +290,15 @@
       </div>
 
       <!-- Column 3: About and Logo -->
-      <div class="col-md-3 text-md-center">
-        <img src="images/logo.png" alt=" Logo" class="mb-3" style="width: 130px;">
+      <div class="col-md-3 text-md-center" data-aos="fade-up" data-aos-delay="300">
+        <img src="images/logo.png" alt="Logo" class="mb-3" style="width: 130px;">
         <p>
           construction® is a one-stop solution for all your home construction needs, providing turnkey, end-to-end services tailored to your lifestyle and vision.
         </p>
       </div>
 
       <!-- Column 4: Services -->
-      <div class="col-md-3"  id="foo">
+      <div class="col-md-3" id="foo" data-aos="fade-up" data-aos-delay="400">
         <h5 class="fw-bold mb-3">Services</h5>
         <ul class="list-unstyled">
           <li><a href="service.html" class="footer-link">Residential</a></li>
@@ -298,10 +311,10 @@
     </div>
 
     <!-- Divider -->
-    <hr class="border-light mt-4">
+    <hr class="border-light mt-4" data-aos="zoom-in" data-aos-delay="450">
 
     <!-- Copyright -->
-    <div class="text-center pt-2">
+    <div class="text-center pt-2" data-aos="fade-in" data-aos-delay="500">
       <p class="mb-0">&copy; 2025 construction®. All rights reserved.</p>
     </div>
   </div>
@@ -319,6 +332,10 @@
 
   <script src="js/script.js"></script>
 
-
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>

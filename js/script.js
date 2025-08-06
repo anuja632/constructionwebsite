@@ -4,6 +4,40 @@
     preloader.style.display = "none";
   });
 
+    function animateCount(el, stop, speed) {
+    let start = 0;
+    const duration = Math.floor(speed / stop);
+    el.textContent = '0'; // reset to 0 before each animation
+
+    const counter = setInterval(() => {
+      start++;
+      el.textContent = start;
+      if (start >= stop) {
+        clearInterval(counter);
+      }
+    }, duration);
+  }
+
+  function initCounters() {
+    const counters = document.querySelectorAll('.count-text');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const stop = parseInt(el.getAttribute('data-stop'));
+          const speed = parseInt(el.getAttribute('data-speed'));
+
+          // Always animate (no once-only check)
+          animateCount(el, stop, speed);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => observer.observe(counter));
+  }
+
+  document.addEventListener("DOMContentLoaded", initCounters);
   // Handle location click with preloader
   document.querySelectorAll('.location-option').forEach(item => {
     item.addEventListener('click', function (e) {
