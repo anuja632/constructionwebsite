@@ -70,7 +70,6 @@
 </nav>
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -81,11 +80,12 @@
   <script src="https://kit.fontawesome.com/a2e0b8a6f0.js" crossorigin="anonymous"></script>
   <style>
 
+
     .hero-section {
       background-image: url("https://img.freepik.com/premium-photo/white-boards-table-top-wooden-texture-abstract-background_84485-3507.jpg?w=1480");
       border-radius: 12px;
       padding: 40px 30px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
       position: relative;
       overflow: hidden;
     }
@@ -96,21 +96,21 @@
     }
 
     .hero-text h1 span {
-      color:#001489;
+      color: #001489;
     }
 
     .badge-box {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      font-size: 14px;
+      font-size: 18px;
       margin-top: 10px;
     }
 
     .badge-box .highlight {
-      color:#001489;
+      color: #001489;
       font-weight: bold;
-      font-size: 1.2rem;
+      font-size: 30px;
     }
 
     .badge-box .subtext {
@@ -118,8 +118,8 @@
     }
 
     .structural-badge {
-      background-color: #000;
-      color: #fff;
+      background-color: #001489;
+      color: #FEC902;
       padding: 8px 16px;
       font-size: 12px;
       border-radius: 4px;
@@ -129,19 +129,21 @@
     .hero-image img {
       width: 100%;
       border-radius: 10px;
-    height: 400px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      height: auto;
+      max-height: 400px;
+      object-fit: cover;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
     }
 
     .form-section {
       background: #fff;
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
 
     .btn-orange {
-      background-color:#001489;
+      background-color: #001489;
       color: white;
       font-weight: bold;
       border: none;
@@ -149,22 +151,14 @@
       transition: background-color 0.3s;
     }
 
-
-    .whatsapp-icon {
-      position: absolute;
-      right: 15px;
-      top: 50%;
-      transform: translateY(-50%);
-      color: green;
-    }
-
     .highlight-box {
-      background-color:#001489;
+      background-color: #001489;
       color: white;
       padding: 12px 20px;
       border-radius: 8px;
       font-weight: bold;
       min-width: 120px;
+      text-align: center;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     }
 
@@ -176,19 +170,61 @@
     .highlight-label {
       font-size: 0.9rem;
     }
+.big-number {
+  font-size: 1.8rem; /* Adjust as needed */
+  font-weight: 800;
+  margin-right: 4px;
+}
+
+    /* Responsive Tweaks */
+    @media (max-width: 991.98px) {
+      .hero-text h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-image img {
+        height: 300px;
+      }
+
+      .highlight-box {
+        min-width: 100px;
+      }
+    }
 
     @media (max-width: 768px) {
       .hero-text h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
+
       .form-section {
-        margin-top: 20px;
+        margin-top: 30px;
+      }
+
+      .highlight-box {
+        flex: 1 1 45%;
+      }
+
+      .structural-badge {
+        font-size: 11px;
       }
     }
 
     @media (max-width: 576px) {
       .hero-section {
         padding: 20px 15px;
+      }
+
+      .hero-text h1 {
+        font-size: 1.5rem;
+      }
+
+      .highlight-box {
+        padding: 10px 12px;
+        font-size: 0.85rem;
+      }
+
+      .highlight-number {
+        font-size: 1.2rem;
       }
     }
   </style>
@@ -199,83 +235,78 @@
     <div class="container">
       <div class="row align-items-start flex-column flex-md-row">
         
-        <!-- Left: Text -->
+        <!-- Left Content -->
         <div class="col-md-9 hero-text">
-          <div class="abi d-flex">
-            <h1>CONSTRUCT YOUR <span>DREAM HOME</span></h1>
-            <div class="d-flex align-items-center mt-3">
-              <div class="badge-box me-4">
+          <h1>CONSTRUCT YOUR <span>DREAM HOME</span></h1>
+
+          <div class="row align-items-center mt-4 g-4">
+            <!-- Image -->
+            <div class="col-lg-7">
+              <img 
+                src="image/3d-model.jpg" 
+                alt="Dream Home" 
+                class="rounded shadow w-100" 
+              />
+            </div>
+
+            <!-- Info & Stats -->
+            <div class="col-lg-5 d-flex flex-column gap-4">
+              <div class="badge-box text-start">
                 <div class="highlight">India’s No.1</div>
                 <div class="subtext">Tech-Enabled Construction Company</div>
               </div>
-              <div class="structural-badge">10 YEAR STRUCTURAL WARRANTY</div>
+
+              <div class="d-flex flex-wrap gap-3 justify-content-start">
+                <div class="highlight-box">
+                  <div class="highlight-number">9,000+</div>
+                  <div class="highlight-label">Homes</div>
+                </div>
+                <div class="highlight-box">
+                  <div class="highlight-number">11,000+</div>
+                  <div class="highlight-label">Floor Plans</div>
+                </div>
+              </div>
+<div class="structural-badge text-center align-self-start mt-3">
+  <span class="big-number">10</span> YEAR STRUCTURAL WARRANTY
+</div>
+
             </div>
           </div>
-<div class="row align-items-center mt-4 g-4">
-  <!-- Image -->
-  <div class="col-lg-6">
-<img 
-  src="image/3d-model.jpg" 
-  alt="Dream Home" 
-  class="rounded shadow" 
-  style="width: 500px; height: 400px; object-fit: cover;" 
-/>
-  </div>
-
-  <!-- Highlight Boxes -->
-  <div class="col-lg-6 d-flex flex-wrap gap-5 justify-content-center">
-    <div class="highlight-box text-center">
-      <div class="highlight-number">9,000+</div>
-      <div class="highlight-label">Homes</div>
-    </div>
-    <div class="highlight-box text-center">
-      <div class="highlight-number">11,000+</div>
-      <div class="highlight-label">Floor Plans</div>
-    </div>
-  </div>
-</div>
-
-
         </div>
 
-<!-- Right: Form -->
-<div class="col-md-3 mt-5 pt-5">
-  <div class="form-section w-100">
-    <h5 class="fw-bold mb-3">
-      <i class="fas fa-phone-volume me-2 text-primary"></i>
-      Talk to Our Expert
-    </h5>
-    
-    <form onsubmit="event.preventDefault(); alert('Your request has been submitted!')">
-      <!-- Name Field -->
-      <div class="mb-3">
-        <label for="name" class="form-label">Name*</label>
-        <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required />
-      </div>
+        <!-- Right Form -->
+        <div class="col-md-3 mt-5 pt-md-5">
+          <div class="form-section w-100">
+            <h5 class="fw-bold mb-3">
+              <i class="fas fa-phone-volume me-2 text-primary"></i>
+              Talk to Our Expert
+            </h5>
+            
+            <form onsubmit="event.preventDefault(); alert('Your request has been submitted!')">
+              <div class="mb-3">
+                <label for="name" class="form-label">Name*</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required />
+              </div>
 
-      <!-- Phone Field -->
-      <div class="mb-3">
-        <label for="phone" class="form-label">Phone Number*</label>
-        <div class="input-group">
-          <span class="input-group-text">+91</span>
-          <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter phone number" required />
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number*</label>
+                <div class="input-group">
+                  <span class="input-group-text">+91</span>
+                  <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter phone number" required />
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="location" class="form-label">Plot Location*</label>
+                <input type="text" id="location" name="location" class="form-control" placeholder="Where is your plot located?" required />
+              </div>
+
+              <button type="submit" class="btn btn-orange w-100">
+                Book Free Consultation
+              </button>
+            </form>
+          </div>
         </div>
-      </div>
-
-      <!-- Location Field -->
-      <div class="mb-3">
-        <label for="location" class="form-label">Plot Location*</label>
-        <input type="text" id="location" name="location" class="form-control" placeholder="Where is your plot located?" required />
-      </div>
-
-      <!-- Submit Button -->
-      <button type="submit" class="btn btn-orange w-100">
-        Book Free Consultation
-      </button>
-    </form>
-  </div>
-</div>
-
 
       </div>
     </div>
@@ -283,6 +314,7 @@
 
 </body>
 </html>
+
 
 
 
