@@ -64,6 +64,7 @@
       position: relative;
       overflow: hidden;
     }
+
 .hero-section {
   position: relative;
   background-image: url("https://img.freepik.com/premium-photo/white-boards-table-top-wooden-texture-abstract-background_84485-3507.jpg?w=1480");
@@ -122,7 +123,7 @@
       max-width: 100%;
       border-radius: 16px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      max-height: 550px;
+      /* max-height: 550px; */
     }
 
     h2, h4 {
@@ -197,6 +198,7 @@
         .offer-title {
       color: #FEC902 ;
       font-weight: 700;
+      font-size: 22px;
     }
     .main-heading {
       color: #1e2a78;
@@ -248,7 +250,7 @@
   transition: transform 0.3s ease;
   text-align: left;
   /* display: flex;               Align icon and content side by side */
-  gap: 1rem;
+  /* gap: 1rem; */
   align-items: flex-start;     /* Align text top with icon */
   background: #fff;
   color:#000;            /* Optional: background for contrast */
@@ -266,7 +268,7 @@
 }
 
 .icon-circle {
-  background-color: rgb(255, 225, 154);
+  background-color:#FEC902;
   width: 45px;
   height: 45px;
   color: #001489;
@@ -466,6 +468,7 @@
 
 .Lap{
 color:#001489;
+font-size: 19px;
 }
 
 .logo-slider {
@@ -556,7 +559,7 @@ color:#001489;
 
 .project-gallery span.text-warning {
   color: #FEC902 !important;
-  font-size: 0.9rem;
+  font-size: 20px;
   letter-spacing: 1px;
 }
 
@@ -599,11 +602,19 @@ color:#001489;
       align-items: center;
       justify-content: center;
       padding: 60px 20px;
-      /* max-width: 1200px; */
       margin: auto;
             background:#f2f3f5;
 
     }
+/* .contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  margin: auto;
+  background: rgba(0, 20, 137, 0.35);
+} */
 
     .contact-img {
       flex: 1 1 300px;
@@ -612,7 +623,7 @@ color:#001489;
 
     .contact-img img {
       max-width: 100%;
-      height: auto;
+      height: 300px;
     }
 
     .contact-text {
@@ -1276,7 +1287,7 @@ a{
 }
     .section-subtitle, .section-subtitle__tagline {
   text-align: center;
-  font-size: 15px;
+  font-size: 19px;
   color:#FEC902;
 font-weight: 700;
   /* margin-top: -1rem; */
@@ -2040,99 +2051,62 @@ font-weight: 700;
     padding: 20px 15px;
   }
 }
-
-
 .mission-vision-section {
-  background: url('https://beaconbuilders.net/img/slider-3.jpg') no-repeat center center/cover;
-  background-attachment: fixed;
-  padding: 100px 20px;
+  padding: 30px;
   position: relative;
-  color: #fff;
+  /* color: #000; */
   z-index: 1;
   overflow: hidden;
 }
 
-.mission-vision-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.8); /* Adjust darkness here */
-  z-index: -1;
+.content-block {
+  margin: 0 auto;
+  text-align: center;
+  color: #000;
+  padding: 40px 30px;
+  border-radius: 12px;
+  transition: 0.4s ease;
+  border: 1px solid #333;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
 }
 
-#foo{
-  text-align: right;
+.content-block:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px #fec902,
+              0 0 30px #fec902,
+              0 0 45px #fec902;
+  border-color: #fec902;
 }
 
-    .content-block {
-      max-width: 800px;
-      margin: 0 auto 100px;
-      text-align: center;
-      position: relative;
-    }
+.content-block h2 {
+  /* font-size: 36px; */
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #001489;
+}
 
-    .content-block h2 {
-      font-size: 48px;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
+.content-block p {
+  font-size: 16px;
+  line-height: 1.8;
+  /* max-width: 700px; */
+  margin: 0 auto;
+  text-align: justify;
+}
 
-    .content-block p {
-      font-size: 15px;
-      color: #fff;
-      line-height: 1.8;
-      max-width: 700px;
-      margin: 0 auto;
-      text-align: justify;
-    }
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .content-block h2 {
+    font-size: 36px;
+  }
 
-    .divider-right, .divider-left {
-      position: absolute;
-      top: 20px;
-      display: flex;
-      align-items: center;
-    }
+  .content-block p {
+    font-size: 15px;
+  }
 
-    .divider-right {
-      right: -80px;
-    }
-
-    .divider-left {
-      left: -80px;
-      flex-direction: row-reverse;
-    }
-
-    .dot {
-      width: 14px;
-      height: 14px;
-      background-color:  #FEC902;
-      border-radius: 50%;
-    }
-
-    .line {
-      height: 2px;
-      width: 100px;
-      background-color:  #FEC902;
-      margin: 0 8px;
-    }
-
-    @media (max-width: 768px) {
-      .content-block h2 {
-        font-size: 36px;
-      }
-
-      .divider-right,
-      .divider-left {
-        position: static;
-        justify-content: center;
-        margin-bottom: 20px;
-        flex-direction: row;
-      }
-
-      .divider-left {
-        flex-direction: row;
-      }
-    }
+  .mission-vision-section {
+    padding: 60px 15px;
+  }
+}
 
     .cta-section {
       background-color: #001489; /* Dark blue */

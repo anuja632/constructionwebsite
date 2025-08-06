@@ -71,58 +71,220 @@
 
 
 
-<!-- Hero Section -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dream Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a2e0b8a6f0.js" crossorigin="anonymous"></script>
+  <style>
+
+    .hero-section {
+      background-image: url("https://img.freepik.com/premium-photo/white-boards-table-top-wooden-texture-abstract-background_84485-3507.jpg?w=1480");
+      border-radius: 12px;
+      padding: 40px 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-text h1 {
+      font-size: 2.8rem;
+      font-weight: 800;
+    }
+
+    .hero-text h1 span {
+      color:#001489;
+    }
+
+    .badge-box {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .badge-box .highlight {
+      color:#001489;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .badge-box .subtext {
+      color: #333;
+    }
+
+    .structural-badge {
+      background-color: #000;
+      color: #fff;
+      padding: 8px 16px;
+      font-size: 12px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .hero-image img {
+      width: 100%;
+      border-radius: 10px;
+    height: 400px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    }
+
+    .form-section {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .btn-orange {
+      background-color:#001489;
+      color: white;
+      font-weight: bold;
+      border: none;
+      padding: 10px;
+      transition: background-color 0.3s;
+    }
+
+
+    .whatsapp-icon {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: green;
+    }
+
+    .highlight-box {
+      background-color:#001489;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      min-width: 120px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .highlight-number {
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .highlight-label {
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 2rem;
+      }
+      .form-section {
+        margin-top: 20px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero-section {
+        padding: 20px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
   <div class="hero-section">
-      <div class="container">
-        <!-- First Row: Text and Warranty -->
-        <div class="row align-items-center mb-4 text-center text-lg-start">
-          <div class="col-lg-6">
-            <h2 class="mb-0 text-dark">CONSTRUCT YOUR <span class="highlight">DREAM HOME</span></h2>
-          </div>
-          <div class="col-lg-4">
-            <p class="mb-0 fw-semibold">India’s <span class="highlight">No.1</span> Tech-Enabled Construction Company</p>
-          </div>
-          <div class="col-lg-2 mt-3 mt-lg-0">
-            <div class="warranty-badge">10 YEAR <span>STRUCTURAL WARRANTY</span></div>
-          </div>
-        </div>
-      
-        <!-- Second Row: Image and Form -->
-        <div class="row align-items-center">
-          <!-- Left: Image -->
-          <div class="col-lg-6 mb-4 mb-lg-0">
-            <img src="image/gallery5.webp" alt="Modern Home" class="hero-image w-100">
-          </div>
-      
-          <!-- Right: Form -->
-          <div class="col-lg-6">
-            <div class="form-box">
-              <h4 class="mb-3 text-dark">Get in Touch</h4>
-              <form>
-                <div class="mb-3">
-                  <label for="name" class="form-label">Full Name</label>
-                  <input type="text" class="form-control" id="name" placeholder="John Doe">
-                </div>
-                <div class="mb-3">
-                  <label for="phone" class="form-label">Phone Number</label>
-                  <input type="tel" class="form-control" id="phone" placeholder="9876543210">
-                </div>
-                <div class="mb-3">
-                  <label for="email" class="form-label">Email Address</label>
-                  <input type="email" class="form-control" id="email" placeholder="john@example.com">
-                </div>
-                <div class="mb-3">
-                  <label for="message" class="form-label">Your Message</label>
-                  <textarea class="form-control" id="message" rows="3" placeholder="Tell us what you're looking for..."></textarea>
-                </div>
-                <button type="submit" class="btn text-white" style="background-color:#001489;">Submit Request</button>
-              </form>
+    <div class="container">
+      <div class="row align-items-start flex-column flex-md-row">
+        
+        <!-- Left: Text -->
+        <div class="col-md-9 hero-text">
+          <div class="abi d-flex">
+            <h1>CONSTRUCT YOUR <span>DREAM HOME</span></h1>
+            <div class="d-flex align-items-center mt-3">
+              <div class="badge-box me-4">
+                <div class="highlight">India’s No.1</div>
+                <div class="subtext">Tech-Enabled Construction Company</div>
+              </div>
+              <div class="structural-badge">10 YEAR STRUCTURAL WARRANTY</div>
             </div>
           </div>
+<div class="row align-items-center mt-4 g-4">
+  <!-- Image -->
+  <div class="col-lg-6">
+<img 
+  src="image/3d-model.jpg" 
+  alt="Dream Home" 
+  class="rounded shadow" 
+  style="width: 500px; height: 400px; object-fit: cover;" 
+/>
+  </div>
+
+  <!-- Highlight Boxes -->
+  <div class="col-lg-6 d-flex flex-wrap gap-5 justify-content-center">
+    <div class="highlight-box text-center">
+      <div class="highlight-number">9,000+</div>
+      <div class="highlight-label">Homes</div>
+    </div>
+    <div class="highlight-box text-center">
+      <div class="highlight-number">11,000+</div>
+      <div class="highlight-label">Floor Plans</div>
+    </div>
+  </div>
+</div>
+
+
+        </div>
+
+<!-- Right: Form -->
+<div class="col-md-3 mt-5 pt-5">
+  <div class="form-section w-100">
+    <h5 class="fw-bold mb-3">
+      <i class="fas fa-phone-volume me-2 text-primary"></i>
+      Talk to Our Expert
+    </h5>
+    
+    <form onsubmit="event.preventDefault(); alert('Your request has been submitted!')">
+      <!-- Name Field -->
+      <div class="mb-3">
+        <label for="name" class="form-label">Name*</label>
+        <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required />
+      </div>
+
+      <!-- Phone Field -->
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone Number*</label>
+        <div class="input-group">
+          <span class="input-group-text">+91</span>
+          <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter phone number" required />
         </div>
       </div>
 
+      <!-- Location Field -->
+      <div class="mb-3">
+        <label for="location" class="form-label">Plot Location*</label>
+        <input type="text" id="location" name="location" class="form-control" placeholder="Where is your plot located?" required />
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn btn-orange w-100">
+        Book Free Consultation
+      </button>
+    </form>
   </div>
+</div>
+
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
 
   <!-- about -->
   <section class="about-section">
@@ -246,7 +408,7 @@
           </div>
           <div>
             <h5 class="Lap">Tailored Living Spaces</h5>
-            <p>Designed with purpose and built around your lifestyle, every project reflects your vision.</p>
+            <p>Designed with purpose and built around your lifestyle, every project your vision.</p>
           </div>
         </div>
       </div>
@@ -511,7 +673,7 @@
         <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=200&h=200" alt="Michael L." class="testimonial-image">
         <h3 class="testimonial-name">Michael L.</h3>
         <p class="testimonial-role">Creative Director @Yo</p>
-        <p class="testimonial-text">"The Landing Page UI Kit has been a game changer. Helped us deliver faster."</p>
+        <p class="testimonial-text">"The Landing Page UI Kit has been a game changer. Helped us deliver."</p>
         <div class="rating">
           <div class="star filled">★</div><div class="star filled">★</div><div class="star filled">★</div><div class="star filled">★</div><div class="star empty">★</div>
         </div>
@@ -522,7 +684,7 @@
         <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200&h=200" alt="Lauren M." class="testimonial-image">
         <h3 class="testimonial-name">Lauren M.</h3>
         <p class="testimonial-role">UI Designer @Boo</p>
-        <p class="testimonial-text">"This UI Kit has everything I need to quickly finish projects. It's part of my go-to tools now."</p>
+        <p class="testimonial-text">"This UI Kit has everything I need to quickly finish projects."</p>
         <div class="rating">
           <div class="star filled">★</div><div class="star filled">★</div><div class="star filled">★</div><div class="star filled">★</div><div class="star filled">★</div>
         </div>
