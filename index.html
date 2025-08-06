@@ -14,7 +14,7 @@
   <!-- Animate.css -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
 
   <!-- Owl Carousel CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
@@ -273,41 +273,43 @@
 
 
 
-  <!-- about -->
-  <section class="about-section" data-aos="fade-up">
-    <div class="container">
-      <div class="text-center mb-4"  data-aos="zoom-in">
-        <h2 class="section-title">One-Stop Solution for <span>Your Dream Home Construction</span></h2>
-      <div class="decor-line" data-aos="fadeup" data-aos-delay="200"></div>
-      </div>
-      <div class="row align-items-center">
-        <!-- Image Column -->
-        <div class="col-lg-6"  data-aos="fade-up">
-          <div class="about-image">
-            <img src="image/galeery2.webp" alt="Modern Home Design">
-          </div>
-        </div>
-
-<div class="col-lg-6"  data-aos="fade-down">
-  <div class="about-content mt-5">
-    <h2>Creating <span style="color:#FEC902;">Elegant Spaces</span></h2>
-    <p>
-      We specialize in crafting interiors and exteriors that reflect both functionality and beauty. Whether it’s space planning, facade design, or detailing elements like lighting and textures — our team ensures every inch speaks of thoughtful design.
-    </p>
-    <p>
-      Each project is a collaboration of your vision and our creative expertise. From the initial sketches to the final finishing touches, we focus on delivering refined, timeless designs tailored to your lifestyle.
-    </p>
-        <p>
-      Through close collaboration, we turn ideas into inspiring environments — tailored perfectly to your taste, purpose, and future needs. The result: a signature space that tells your story with flair.
-    </p>
-    <a href="about.html" class="btn btn-yellow-outline mt-3">Explore Our Creations</a>
-  </div>
-</div>
-
-
-      </div>
+<!-- about -->
+<section class="about-section" data-aos="fade-up">
+  <div class="container">
+    <div class="text-center mb-4" data-aos="zoom-in">
+      <h2 class="section-title">One-Stop Solution for <span>Your Dream Home Construction</span></h2>
+      <div class="decor-line" data-aos="fade-up" data-aos-delay="200"></div>
     </div>
-  </section>
+    <div class="row align-items-center">
+      
+      <!-- Image Column -->
+      <div class="col-lg-6" data-aos="zoom-in-up">
+        <div class="about-image">
+          <img src="image/galeery2.webp" alt="Modern Home Design">
+        </div>
+      </div>
+
+      <!-- Content Column -->
+      <div class="col-lg-6">
+        <div class="about-content mt-5" data-aos="zoom-in-down">
+          <h2>Creating <span style="color:#FEC902;">Elegant Spaces</span></h2>
+          <p>
+            We specialize in crafting interiors and exteriors that reflect both functionality and beauty. Whether it’s space planning, facade design, or detailing elements like lighting and textures — our team ensures every inch speaks of thoughtful design.
+          </p>
+          <p>
+            Each project is a collaboration of your vision and our creative expertise. From the initial sketches to the final finishing touches, we focus on delivering refined, timeless designs tailored to your lifestyle.
+          </p>
+          <p>
+            Through close collaboration, we turn ideas into inspiring environments — tailored perfectly to your taste, purpose, and future needs. The result: a signature space that tells your story with flair.
+          </p>
+          <a href="about.html" class="btn btn-yellow-outline mt-3">Explore Our Creations</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- services -->
 <div class="container py-5" id="services">
   <div class="row align-items-center">
@@ -391,7 +393,7 @@
 
     <div class="row gy-4">
       <!-- Card 1 -->
-      <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+      <div class="col-sm-6 col-lg-3" data-aos="zoom-out-down">
         <div class="icon-box p-4 border rounded h-100 d-flex flex-column">
           <div class="d-flex align-items-start mb-3">
             <div class="icon-circle">
@@ -406,7 +408,7 @@
       </div>
 
       <!-- Card 2 -->
-      <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-sm-6 col-lg-3" data-aos="fade-up" >
         <div class="icon-box p-4 border rounded h-100 d-flex flex-column">
           <div class="d-flex align-items-start mb-3">
             <div class="icon-circle">
@@ -421,7 +423,7 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+      <div class="col-sm-6 col-lg-3" data-aos="fade-up">
         <div class="icon-box p-4 border rounded h-100 d-flex flex-column">
           <div class="d-flex align-items-start mb-3">
             <div class="icon-circle">
@@ -436,7 +438,7 @@
       </div>
 
       <!-- Card 4 -->
-      <div class="col-sm-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+      <div class="col-sm-6 col-lg-3" data-aos="fade-up" >
         <div class="icon-box p-4 border rounded h-100 d-flex flex-column">
           <div class="d-flex align-items-start mb-3">
             <div class="icon-circle">
@@ -892,8 +894,10 @@
 <!-- AOS JS -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
-  AOS.init();
+  AOS.init({
+  });
 </script>
+
 
 
 </body>
