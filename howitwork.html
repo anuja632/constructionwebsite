@@ -32,50 +32,59 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg sticky-top bg-white shadow-sm">
   <div class="container">
-    <div class="row w-100 align-items-center flex-nowrap">
-      
-      <!-- Left: Logo + Location -->
-      <div class="col d-flex align-items-center">
-        <a class="navbar-brand fw-bold d-flex align-items-center text-dark me-3" href="index.html">
-          <img src="images/logo.png" alt="Logo" height="40" class="me-2">
-        </a>
 
-        <!-- Location Dropdown -->
-        <div class="dropdown">
-          <button class="btn dropdown-toggle" type="button" id="locationDropdown" data-bs-toggle="dropdown">
-            Location
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="locationDropdown">
-            <li><a class="dropdown-item location-option" href="#" data-location="Bangalore">Bangalore</a></li>
-            <li><a class="dropdown-item location-option" href="#" data-location="Chennai">Chennai</a></li>
-            <li><a class="dropdown-item location-option" href="#" data-location="Coimbatore">Coimbatore</a></li>
-            <li><a class="dropdown-item location-option" href="#" data-location="Madurai">Madurai</a></li>
-            <li><a class="dropdown-item location-option" href="#" data-location="Trichy">Trichy</a></li>
-            <li><a class="dropdown-item location-option" href="#" data-location="Salem">Salem</a></li>
-          </ul>
-        </div>
+    <!-- Brand + Toggler -->
+    <div class="d-flex align-items-start align-items-sm-center w-100">
+      <!-- Logo -->
+      <a class="navbar-brand fw-bold d-flex align-items-center text-dark me-3 mb-2 mb-sm-0" href="index.html">
+        <img src="images/logo.png" alt="Logo" height="40" class="me-2">
+      </a>
+
+      <!-- Location Dropdown -->
+      <div class="dropdown mb-2 mb-sm-0">
+        <button class="btn dropdown-toggle" type="button" id="locationDropdown" data-bs-toggle="dropdown">
+          Location
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="locationDropdown">
+          <li><a class="dropdown-item location-option" href="#" data-location="Bangalore">Bangalore</a></li>
+          <li><a class="dropdown-item location-option" href="#" data-location="Chennai">Chennai</a></li>
+          <li><a class="dropdown-item location-option" href="#" data-location="Coimbatore">Coimbatore</a></li>
+          <li><a class="dropdown-item location-option" href="#" data-location="Madurai">Madurai</a></li>
+          <li><a class="dropdown-item location-option" href="#" data-location="Trichy">Trichy</a></li>
+          <li><a class="dropdown-item location-option" href="#" data-location="Salem">Salem</a></li>
+        </ul>
       </div>
 
-      <!-- Center: Menu -->
-      <div class="col-auto d-none d-lg-block">
-        <ul class="navbar-nav mx-auto flex-row gap-3">
+      <!-- Toggler Button -->
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+    <!-- Navbar content -->
+    <div class="collapse navbar-collapse mt-3" id="mainNavbar">
+      <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center w-100">
+
+        <!-- Center: Menu -->
+        <ul class="navbar-nav flex-column flex-sm-row gap-2 gap-sm-4 mb-3 mb-sm-0">
           <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
           <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
           <li class="nav-item"><a class="nav-link" href="howitwork.html">How it Works</a></li>
           <li class="nav-item"><a class="nav-link" href="ourproject.html">Our Projects</a></li>
         </ul>
+
+        <!-- CTA Button -->
+        <div class="d-flex justify-content-start justify-content-sm-end w-100 w-sm-auto">
+          <a href="contact.html" class="btn btn-sm btn-primary px-3" style="background-color: #001489 !important; font-size: 18px;">
+            Get Build Quote
+          </a>
+        </div>
       </div>
-
-<div class="col d-flex justify-content-end align-items-center gap-3" >
-  <a href="contact.html" class="btn btn-sm btn-primary px-3" style="background-color: #001489 !important; font-size: 18px;">
-    Get Build Quote
-  </a>
-</div>
-
     </div>
   </div>
 </nav>
+
 
 
 
@@ -288,13 +297,13 @@
 <!-- contact -->
   <section class="contact-section">
     <!-- Left: Image -->
-    <div class="contact-img"  data-aos="fade-down-right">
+    <div class="contact-img"  data-aos="fade-down">
       <img src="image/contact.avif" alt="Contact Expert" />
       <!-- Replace with your image or use uploaded one -->
     </div>
 
     <!-- Right: Text and Buttons -->
-    <div class="contact-text" data-aos="fade-down-left">
+    <div class="contact-text" data-aos="fade-down">
       <h2>Contact With Our Expert</h2>
       <p>Book your appointment to talk to our experts who will assist you with all your doubts regarding our services.</p>
       <div class="contact-buttons">

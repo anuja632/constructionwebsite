@@ -2293,16 +2293,30 @@ font-weight: 700;
       margin-bottom: 20px;
       text-align: center;
     }
+.client-form input,
+.client-form select {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  appearance: none; /* hides default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
 
-    .client-form input,
-    .client-form select {
-      width: 100%;
-      padding: 12px 15px;
-      margin-bottom: 15px;
-      font-size: 14px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
+/* Custom dropdown arrow */
+.client-form select {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 16px 16px;
+  padding-right: 40px; /* space for the arrow */
+}
+
 
     .btn-style-twelve {
       background-color: #001489;
