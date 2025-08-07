@@ -42,7 +42,7 @@
     .navbar-nav .nav-link {
       color: #001489 !important;
       font-weight: 600;
-      margin-right: 15px;
+      /* margin-right: 15px; */
       font-size: 18px;
 
     }
@@ -89,6 +89,25 @@ img:hover {
 .ms-auto a:hover i {
   color: #001489; /* or any highlight color */
 }
+.btn-quote {
+  background-color: #001489;
+  color: white;
+  border: none;
+  font-size: 18px;
+  padding: 10px;
+}
+
+/* Mobile (xs, sm, md): Center the button */
+@media (max-width: 991.98px) {
+  .btn-quote {
+    text-align: start !important;
+  }
+}
+
+.btn-quote:hover {
+  background-color: #000c66;
+}
+
 
     h2, h4 {
       font-family: 'Open Sans', sans-serif;
@@ -2129,6 +2148,13 @@ font-weight: 700;
     background: #f6f6f6;
     padding: 0px;
 }
+    .navbar-nav .nav-link {
+      color: #001489 !important;
+      font-weight: 600;
+      /* margin-right: 15px; */
+      font-size: 15px;
+
+    }
 .title-box span {
     font-size: 19px !important;
     color: #001489;
